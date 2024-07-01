@@ -1,0 +1,50 @@
+baseURL: https://blog.hgomez.net/
+languageCode: en-us
+title: Rico's Blog
+theme: ["PaperMod"]
+
+enableEmoji: true
+
+params:
+
+  defaultTheme: auto
+
+  homeInfoParams:
+    Title: Welcome to Rico's Blog
+    Content: OSS activist, ASF Member, former Tomcat contributor, founder of JPackage, DevOps Incubator and OBuildFactory projects. Dev, QA and Ops. 
+
+  profileMode:
+    enabled: false
+    title: "Rico's Blog"
+    subtitle: "Welcome to Rico's Blog"
+    imageUrl: "https://avatars3.githubusercontent.com/u/274370"
+    imageTitle: "hgomez icon"
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: Archives
+        url: "/archives"
+      - name: Github
+        url: "https://github.com/hgomez"
+
+  socialIcons: 
+    - name: "X"
+      url: "https://x.com/hgomez"
+    - name: "GitHub"
+      url: "https://github.com/hgomez/"
+    - name: "LinkedIn"
+      url: "https://fr.linkedin.com/in/gomezhe"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+module:
+  mount:
+  - source = 'static'
+    target = 'static'
+  - source = 'images'
+    target = 'static/images'
+

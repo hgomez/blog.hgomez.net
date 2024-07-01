@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Understanding Java From Command Line on OSX | Rico&#39;s Blog</title>
+<meta name="keywords" content="">
+<meta name="description" content="Java on OSX OSX is a good platform for Java development but also running Java applications. Sadly XServe servers are no more available but in many cases Mac Mini could to pretty good works as Java server applications.
+For a long time, OSX Java was maintained by Apple, from Sun Hotspot and was often a bit late vs Windows/Linux releases.
+With Lion, Apple announced that they won’t produce Java for their futures OS, starting with Mountain Lion (10.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/post/20120720---understanding-java-from-command-line-on-osx/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/post/20120720---understanding-java-from-command-line-on-osx/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Rico&#39;s Blog (Alt + H)">Rico&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Understanding Java From Command Line on OSX
+    </h1>
+    <div class="post-meta"><span title='2012-07-20 13:20:23 +0200 CEST'>July 20, 2012</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="java-on-osx">Java on OSX<a hidden class="anchor" aria-hidden="true" href="#java-on-osx">#</a></h1>
+<p>OSX is a good platform for Java development but also running Java applications. Sadly XServe servers are no more available but in many cases Mac Mini could to pretty good works as Java server applications.</p>
+<p>For a long time, OSX Java was maintained by Apple, from Sun Hotspot and was often a bit late vs Windows/Linux releases.</p>
+<p>With Lion, Apple announced that they won’t produce Java for their futures OS, starting with Mountain Lion (10.8) and Oracle will do the job as they did for major distributions.</p>
+<p>OpenJDK project included OSX support more than one year ago and there is now a very good coverage of Java for OSX.</p>
+<p>It take some time to see first official Java 7 from Oracle on OSX, for Lion only, but there was community alternatives like <a href="http://code.google.com/p/openjdk-osx-build/">openjdk-osx-build</a>, where you could find a large choice of OpenJDK for OSX (7, 8, 8 with Lambda, 8 with Jigsaw).</p>
+<p>If you install Java’s from <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle</a> or <a href="http://code.google.com/p/openjdk-osx-build/downloads/list">openjdk-osx-build</a>, you may want to know how to select one of them for your application and even select a specific one for some of your applications.</p>
+<h1 id="java-preferences">Java Preferences<a hidden class="anchor" aria-hidden="true" href="#java-preferences">#</a></h1>
+<p>Apple provide a good tool to select default JVM, Java Preferences :</p>
+<p>![[JavaPreferences.png]]</p>
+<p>In this screenshot you could see many JVM, from many sources, <strong>Apple, Oracle</strong> and <strong>openjdk-osx-build</strong> and default ordering Java (from up to bottom).</p>
+<p>Here you’ll see that default JVM will be Apple Java 1.6.0_33-b03-424 in 64bits, next choice will be Apple Java 1.6.0_33-b03-424 in 32bits. You will notice these JVM are marked as System, more on this later.</p>
+<p>Next you’ll find Apple Java 1.6.0_31 in 64 and 32 bits and then Java 1.7 (1.7.0-jdk7u6-b20-20120719) from openjdk-osx-build. By the end you’ll find latest official Oracle Java 7, aka 1.7.0_05.</p>
+<p>What does it means for you in a command line mode, console is just mandatory for any serious OSX geek ?</p>
+<p>Let see java used by default :</p>
+<pre tabindex="0"><code>mbp-rico:~ henri$ java -version
+java version &#34;1.6.0_33&#34;
+Java(TM) SE Runtime Environment (build 1.6.0_33-b03-424-11M3720)
+Java HotSpot(TM) 64-Bit Server VM (build 20.8-b03-424, mixed mode)
+</code></pre><p>Default Java is Apple 1.6.0_33, 64bits as expected, so far so good.</p>
+<p>What should i do if I want to select instead Java 7 ?</p>
+<h2 id="standard-unix-way">Standard Unix way<a hidden class="anchor" aria-hidden="true" href="#standard-unix-way">#</a></h2>
+<p>You could just update your PATH environment variable to update search path :</p>
+<pre tabindex="0"><code>mbp-rico:~ henri$ export PATH=/Library/Java/JavaVirtualMachines/1.7.0u6.jdk/Contents/Home/bin:$PATH
+mbp-rico:~ henri$ java -version
+openjdk version &#34;1.7.0-jdk7u6-b20&#34;
+OpenJDK Runtime Environment (build 1.7.0-jdk7u6-b20-20120719)
+OpenJDK 64-Bit Server VM (build 23.2-b09, mixed mode)
+</code></pre><p>It works but OSX provide smarter mechanism.</p>
+<h2 id="osx-way">OSX way<a hidden class="anchor" aria-hidden="true" href="#osx-way">#</a></h2>
+<p>Keeping in mind we’re discussing command line operation, updating default JVM via Java Preferences will not be retained, will define instead <strong>JAVA_HOME</strong> environment variable like this :</p>
+<pre tabindex="0"><code>mbp-rico:~ henri$ export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.7.0u6.jdk/Contents/Home/
+mbp-rico:~ henri$ java -version
+openjdk version &#34;1.7.0-jdk7u6-b20&#34;
+OpenJDK Runtime Environment (build 1.7.0-jdk7u6-b20-20120719)
+OpenJDK 64-Bit Server VM (build 23.2-b09, mixed mode)
+</code></pre><p>We could keep our current PATH and it will be <strong>Apple java bootstrap</strong> system, living into <strong>/usr/bin/java</strong> who make use of <strong>JAVA_HOME</strong> and launch the proper JVM. Simple but efficient .</p>
+<h2 id="java_home">java_home<a hidden class="anchor" aria-hidden="true" href="#java_home">#</a></h2>
+<p>As we see previously, Java Preferences define an order of preferred JVM on OSX, like alternatives does on many Linux systems, especially those using <a href="http://www.jpackage.org/">JPackage</a> tooling. So there should be a way to get access to these preferences and here entering <strong>java_home</strong></p>
+<p>java_home is located in /usr/libexec and has many useful features :</p>
+<pre tabindex="0"><code>mbp-rico:~ henri$ /usr/libexec/java_home --help
+Usage: java_home [options...]
+    Returns the path to a Java home directory from the current user&#39;s settings.
+
+Options:
+    [-v/--version   &lt;version&gt;]       Filter Java versions in the &#34;JVMVersion&#34; form 1.X(+ or *).
+    [-a/--arch      &lt;architecture&gt;]  Filter JVMs matching architecture (i386, x86_64, etc).
+    [-d/--datamodel &lt;datamodel&gt;]     Filter JVMs capable of -d32 or -d64
+    [-t/--task      &lt;task&gt;]          Use the JVM list for a specific task (Applets, WebStart, BundledApp, JNI, or CommandLine)
+    [-F/--failfast]                  Fail when filters return no JVMs, do not continue with default.
+    [   --exec      &lt;command&gt; ...]   Execute the $JAVA_HOME/bin/&lt;command&gt; with the remaining arguments.
+    [-R/--request]                   Request installation of a Java Runtime if not installed.
+    [-X/--xml]                       Print full JVM list and additional data as XML plist.
+    [-V/--verbose]                   Print full JVM list with architectures.
+    [-h/--help]                      This usage information.
+</code></pre><p>Let’s play with <strong>java_home</strong> now.</p>
+<p>Obtaining path of default JVM :</p>
+<pre tabindex="0"><code>mbp-rico:~ henri$ /usr/libexec/java_home
+/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+</code></pre><p>Obtaining path of default Java 7 JVM :</p>
+<pre tabindex="0"><code>mbp-rico:~ henri$ /usr/libexec/java_home -v 1.7
+/Library/Java/JavaVirtualMachines/1.7.0u6.jdk/Contents/Home
+</code></pre><p>Obtaining path of default Java 8 JVM :</p>
+<pre tabindex="0"><code>mbp-rico:~ henri$ /usr/libexec/java_home -v 1.8
+/Library/Java/JavaVirtualMachines/1.8.0.jdk/Contents/Home
+</code></pre><p>Obtaining path of default Java 1.6 32 bits JVM :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1<!-- raw HTML omitted -->2</td>
+<td><code>&lt;br&gt;mbp-rico:~ henri$ /usr/libexec/java_home -v 1.6 -a i386&lt;br&gt;/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home&lt;br&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Obtaining path of default Java 1.6 64 bits JVM :</p>
+<pre tabindex="0"><code>mbp-rico:~ henri$ /usr/libexec/java_home -v 1.6 -a x86_64
+/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+</code></pre><p>Here you could see that 32 and 64bits JVM have the same path. This is because due to universal mode (i386/x86_64), <strong>Apple</strong> produce a dual mode JVM. This is not the case for <strong>Oracle Java 7</strong> where only 64bits JVM is available.</p>
+<p>Let’s combine <strong>java_home</strong> and <strong>JAVA_HOME</strong> :</p>
+<pre tabindex="0"><code>mbp-rico:~ henri$ export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+mbp-rico:~ henri$ java -version
+openjdk version &#34;1.7.0-jdk7u6-b20&#34;
+OpenJDK Runtime Environment (build 1.7.0-jdk7u6-b20-20120719)
+OpenJDK 64-Bit Server VM (build 23.2-b09, mixed mode)
+</code></pre><p>This is a very nice features if you want to specify a Java Level (6 or 7) following your <strong>Java Preferences</strong> for some of your server side application (let say <strong>Apache Tomcat</strong>) or command operation (like <strong>Apache Maven</strong>).</p>
+<p>Typically for my Apache Tomcat powered application like Jenkins, I usually set it in bin/setenv.sh :</p>
+<pre tabindex="0"><code>export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+CATALINA_OPTS=-Xms256m -Xmx512m -DJENKINS_HOME=$JENKINS_HOME -Dhudson.model.Hudson.logStartupPerformance=true -Duser.language=en -Djava.awt.headless=true
+</code></pre><p>Do you want to get a list of all JVM on your system ?</p>
+<pre tabindex="0"><code>mbp-rico:~ henri$ /usr/libexec/java_home -V
+Matching Java Virtual Machines (33):
+    1.6.0_33-b03-424, x86_64: &#34;Java SE 6&#34;   /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+    1.6.0_33-b03-424, i386:   &#34;Java SE 6&#34;   /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+    1.6.0_31-b04-411, x86_64: &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_31-b04-411.jdk/Contents/Home
+    1.6.0_31-b04-411, i386:   &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_31-b04-411.jdk/Contents/Home
+    1.7.0-jdk7u6-b20-20120719, x86_64:    &#34;OpenJDK 7&#34;   /Library/Java/JavaVirtualMachines/1.7.0u6.jdk/Contents/Home
+    1.8.0-jdk8-b47-20120720, x86_64:  &#34;OpenJDK 8&#34;   /Library/Java/JavaVirtualMachines/1.8.0.jdk/Contents/Home
+    1.7.0-jdk7u4-b21-20120427, i386:  &#34;OpenJDK 7&#34;   /Library/Java/JavaVirtualMachines/1.7.0u4.jdk/Contents/Home
+    1.7.0_05, x86_64: &#34;Java SE 7&#34;   /Library/Java/JavaVirtualMachines/1.7.0.jdk/Contents/Home
+    1.6.0_33-b03-424, x86_64: &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_33-b03-424.jdk/Contents/Home
+    1.6.0_33-b03-424, i386:   &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_33-b03-424.jdk/Contents/Home
+    1.8.0-jdk8-b45-20120713-jigsaw, x86_64:   &#34;OpenJDK 8&#34;   /Library/Java/JavaVirtualMachines/1.8.0-jigsaw.jdk/Contents/Home
+    1.8.0-b48-20120720-lambda, x86_64:    &#34;OpenJDK 8&#34;   /Library/Java/JavaVirtualMachines/1.8.0-lambda.jdk/Contents/Home
+    1.7.0-jdk7u6-b20-20120719, i386:  &#34;OpenJDK 7&#34;   /Library/Java/JavaVirtualMachines/1.7.0u6.jdk/Contents/Home
+    1.7.0-jdk7u4-b21-20120427, x86_64:    &#34;OpenJDK 7&#34;   /Library/Java/JavaVirtualMachines/1.7.0u4.jdk/Contents/Home
+    1.7.0-jdk7u4-b21-20120421, x86_64:    &#34;OpenJDK 7&#34;   /Library/Java/JavaVirtualMachines/1.7.0u4-64.jdk/Contents/Home
+    1.7.0, x86_64:    &#34;OpenJDK 7&#34;   /Library/Java/JavaVirtualMachines/1.7.0u.jdk/Contents/Home
+    1.7.0, i386:  &#34;OpenJDK 7&#34;   /Library/Java/JavaVirtualMachines/1.7.0u.jdk/Contents/Home
+    1.6.0_32-b05-420, x86_64: &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_32-b05-420.jdk/Contents/Home
+    1.6.0_32-b05-420, i386:   &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_32-b05-420.jdk/Contents/Home
+    1.6.0_32-b05-417, x86_64: &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_32-b05-417.jdk/Contents/Home
+    1.6.0_32-b05-417, i386:   &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_32-b05-417.jdk/Contents/Home
+    1.6.0_31-b04-413, x86_64: &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_31-b04-413.jdk/Contents/Home
+    1.6.0_31-b04-413, i386:   &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_31-b04-413.jdk/Contents/Home
+    1.6.0_30-b12-409, x86_64: &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_30-b12-409.jdk/Contents/Home
+    1.6.0_30-b12-409, i386:   &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_30-b12-409.jdk/Contents/Home
+    1.6.0_30-b12-404, x86_64: &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home
+    1.6.0_30-b12-404, i386:   &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_30-b12-404.jdk/Contents/Home
+    1.6.0_29-b11-397, x86_64: &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_29-b11-397.jdk/Contents/Home
+    1.6.0_29-b11-397, i386:   &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_29-b11-397.jdk/Contents/Home
+    1.6.0_27-b07-395, x86_64: &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_27-b07-395.jdk/Contents/Home
+    1.6.0_27-b07-395, i386:   &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_27-b07-395.jdk/Contents/Home
+    1.6.0_26-b03-383, x86_64: &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_26-b03-383.jdk/Contents/Home
+    1.6.0_26-b03-383, i386:   &#34;Java SE 6&#34;   /Library/Java/JavaVirtualMachines/1.6.0_26-b03-383.jdk/Contents/Home
+
+/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+</code></pre><h2 id="note-on-jvm-locations">Note on JVM Locations<a hidden class="anchor" aria-hidden="true" href="#note-on-jvm-locations">#</a></h2>
+<p>You may have noticed many differents paths for JVM :</p>
+<ul>
+<li>
+<p>/System/Library/Java/JavaVirtualMachines is where Apple install System JVM. Here you could have only one JVM by family, ie 1.6, 1.7. These JVM will be available to all users on system.</p>
+</li>
+<li>
+<p>/Library/Java/JavaVirtualMachines is a slot location for guest JVMs, specially designed to host contributors JVM like <strong>Oracle</strong>, <strong>openjdk-osx-build</strong> or <strong>Apple Developper Preview JVMs</strong> Also, these JVM will be available to all users on system.</p>
+</li>
+<li>
+<p>/Users/bill/Library/Java/JavaVirtualMachines is a slot for contributor JVMs but only available to user bill.</p>
+</li>
+</ul>
+<h2 id="to-conclude">To conclude<a hidden class="anchor" aria-hidden="true" href="#to-conclude">#</a></h2>
+<p>OSX is probably the platform with the more choice of Java to run and experiment, Java 6, Java 7, OpenJDK 7, 8, Lambda, Jigsaw.</p>
+<p>And with its <strong>/usr/libexec/java_home</strong> and <strong>JAVA_HOME</strong> environment variable, you could select any of them for your console or command mode operations very easily.</p>
+<p>Enjoy Java on OSX !</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">Rico&#39;s Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
