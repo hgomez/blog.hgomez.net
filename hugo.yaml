@@ -21,11 +21,7 @@ params:
     imageTitle: "hgomez icon"
     imageWidth: 120
     imageHeight: 120
-    buttons:
-      - name: Archives
-        url: "/archives"
-      - name: Github
-        url: "https://github.com/hgomez"
+
 
   socialIcons: 
     - name: "X"
@@ -35,11 +31,31 @@ params:
     - name: "LinkedIn"
       url: "https://fr.linkedin.com/in/gomezhe"
 
+  ShowShareButtons: false
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+
+menu:
+  main:
+    - name: archives
+      pageRef: /archive
+      weight: 30
+    - name: articles
+      url: /
+      weight: 30
+    - name: tags
+      pageRef: /tags
+      weight: 30
+    - name: search
+      pageRef: /search
+      weight: 30
 
 module:
   mount:
@@ -51,11 +67,5 @@ module:
 taxonomies:
   category: categories
   tag: tags
-
-params:
-  ShowShareButtons: false
-  ShowReadingTime: true
-  ShowPostNavLinks: true
-  ShowCodeCopyButtons: true
 
 
