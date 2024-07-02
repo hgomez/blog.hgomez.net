@@ -38,13 +38,13 @@ hugo new site blog.hgomez.net
 cd blog.hgomez.net
 git init
 
-# Grab PaperMod 7.0 and install under themes directory
-curl -L https://github.com/adityatelange/hugo-PaperMod/archive/refs/tags/v7.0.tar.gz -Os
+# Grab latest PaperMod (latest release 7.0 didn't works as expected)
+curl -L https://github.com/adityatelange/hugo-PaperMod/archive/master.zip -Os
 cd themes
-tar xvzf ../v7.0.tar.gz
-mv hugo-PaperMod-7.0/ PaperMod
+unzip ../master.zip
+mv hugo-PaperModmaster/ PaperMod
 cd ..
-rm -f v7.0.tar.gz
+rm -f master.zip
 
 # Activation PaperMode Theme
 echo "theme = 'PaperMode'" >> hugo.toml
