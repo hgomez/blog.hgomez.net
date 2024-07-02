@@ -122,9 +122,10 @@ mbp-rico:~ henri$ /usr/libexec/java_home -v 1.8
 
 Obtaining path of default Java 1.6 32 bits JVM :
 
-|   |   |
-|---|---|
-|1<br>2|```<br>mbp-rico:~ henri$ /usr/libexec/java_home -v 1.6 -a i386<br>/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home<br>```|
+```
+mbp-rico:~ henri$ /usr/libexec/java_home -v 1.6 -a i386
+/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+```
 
 Obtaining path of default Java 1.6 64 bits JVM :
 
