@@ -53,7 +53,7 @@ taxonomies:
   tag: tags
 
 params:
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowReadingTime: true
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
