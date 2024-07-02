@@ -28,11 +28,11 @@ The DevOps Mercs did 3 sessions in Devoxx France 2024
 * [Present](https://www.devoxx.fr/schedule/talk/?id=74361) : 
 * [Futur](https://www.devoxx.fr/schedule/talk/?id=74362)
 
-**Joining us for this exciting roundtable are esteemed experts in their respective fields:**
+Joining us for this exciting roundtable are esteemed experts in their respective fields:
 
 - **DevOps:** Katia Himeur (CockpitIO)
     
-- **GreenIT:** Morgane Ecker (Wescale)
+- **GreenIT:** Morgane Eckert (Wescale)
     
 - **Observability:** Cyrille LeClerc (Grafanalabs)
     
