@@ -2,6 +2,7 @@
 title = 'Iozone and Gnuplot 4.x'
 date = 2011-11-03T13:20:23+02:00
 draft = false
+tags = [ 'Gnuplot', 'Iozone', 'Performances' ]
 +++
 
 [Iozone](http://www.iozone.org/) is a great tool to mesure performance of filesystem. You could find 10 examples [here](http://www.thegeekstuff.com/2011/05/iozone-examples/).

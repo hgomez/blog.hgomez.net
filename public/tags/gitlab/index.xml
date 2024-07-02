@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GitLab on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/gitlab/</link>
+    <description>Recent content in GitLab on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Mar 2015 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gitlab custom hooks - Bash Way</title>
+      <link>http://localhost:1313/post/20150302-gitlab-custom-hooks-bash-way/</link>
+      <pubDate>Mon, 02 Mar 2015 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20150302-gitlab-custom-hooks-bash-way/</guid>
+      <description>If you’re using Gitlab, you may know you could use custom hooks to validate contents. Everything is detailed in http://doc.gitlab.com/ce/hooks/custom_hooks.html
+I found many examples where hooks are Ruby based and using Gitlab APIs but I wanted something in good old bash.
+I found some bash hooks, https://github.com/Praqma/git-hooks, but 7 months old. They still works with Gitlab 7.8.1 and adapted them for my purposes.
+Here is a sample pre-receive hook :</description>
+    </item>
+  </channel>
+</rss>

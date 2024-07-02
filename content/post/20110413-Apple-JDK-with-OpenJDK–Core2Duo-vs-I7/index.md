@@ -1,7 +1,8 @@
 +++
-title = 'Apple JDK with OpenJDK – Core2Duo vs I7'
+title = 'Apple JDK and OpenJDK – Core2Duo vs I7'
 date = 2011-04-13T13:20:23+02:00
 draft = false
+tags = [ 'Benchmarks', 'OpenJDK', 'OSX'  ]
 +++
 
 Previously I did benchmark of Apple VMs and OpenJDK 6 and I wanted to see how all of the JVMs available today on our Mac on two systems, an old Core2Duo and a newer i7. And also see how they perform 32 / 64 bits kernel mode.

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Maven on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/maven/</link>
+    <description>Recent content in Maven on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Mar 2011 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/maven/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tomcat Maven Plugin and Apache Tomcat Post 6.0.29</title>
+      <link>http://localhost:1313/post/20110311-tomcat-maven-plugin-and-apache-tomcat-post-6.0.29/</link>
+      <pubDate>Fri, 11 Mar 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110311-tomcat-maven-plugin-and-apache-tomcat-post-6.0.29/</guid>
+      <description>If you’re using the Tomcat Maven Plugin and want to use post 6.0.29 Apache Tomcat, ie latest 6.0.32, you should update your pom to handle a change in artifact.
+Up to 6.0.29, Eclipse JDT compiler was bundled as jasper-jdt :
+&amp;lt;groupId&amp;gt;org.apache.tomcat&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jasper-jdt&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;6.0.29&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; With 6.0.30, Apache Tomcat team started to bundle Eclipse JDT directly:
+[xml] org.eclipse.jdt.core.compiler ecj 3.5.1 [/xml]
+As consequence, org.apache.tomcat/jasper-jdt artifact didn’t exist anymore after release 6.0.29.</description>
+    </item>
+    <item>
+      <title>Maven JMeter Plugin</title>
+      <link>http://localhost:1313/post/20101104-maven-jmeter-plugin/</link>
+      <pubDate>Thu, 04 Nov 2010 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20101104-maven-jmeter-plugin/</guid>
+      <description>While playing with JMeter Maven plugin, I got some problems :
+First the official Jakarta plugin is pretty old and no more maintened.
+So you should get a new one, from GoogleCode This project moved to GitHub
+Great project but it miss 2 dependencies, commons-logging and soap Without commons-logging your tests may fail and you could see :
+Error in NonGUIDriver java.lang.NullPointerException [INFO] ———————————————————————— [ERROR] BUILD FAILURE [INFO] ———————————————————————— [INFO] There were test errors The fix is easy, get the plugin project and add the following dependencies in it :</description>
+    </item>
+  </channel>
+</rss>

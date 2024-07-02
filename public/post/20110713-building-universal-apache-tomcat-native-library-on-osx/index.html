@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>Building Universal Apache Tomcat Native Library on OSX | Rico&#39;s Blog</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="TCNative, OSX, Tomcat">
 <meta name="description" content="I recently notice that my Apache Tomcat running on OS/X 10.6.8 couldn’t use Apache Tomcat Native Library.
 INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java Jul 13, 2011 11:02:30 AM org.apache.coyote.http11.Http11Protocol init After digging around and with the help of ASFer Mladen Turk, I figure my previous build was stick to 64bits mode only and I switched my JVM to 32bits mode using -d32.">
 <meta name="author" content="">
@@ -158,6 +158,9 @@ sudo ln -s /usr/lib/java/libtcnative-1.0.dylib /usr/lib/java/libtcnative-1.dylib
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/tcnative/">TCNative</a></li>
+      <li><a href="http://localhost:1313/tags/osx/">OSX</a></li>
+      <li><a href="http://localhost:1313/tags/tomcat/">Tomcat</a></li>
     </ul>
   </footer>
 </article>

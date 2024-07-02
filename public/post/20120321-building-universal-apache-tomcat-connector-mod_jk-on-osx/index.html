@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>Building Universal Apache Tomcat Connector (Mod_jk) on OSX | Rico&#39;s Blog</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="mod_jk, OSX, Tomcat">
 <meta name="description" content="Build Universal Apache Tomcat Connector (mod_jk) for OSX follow tricks used for Apache Tomcat Native Library.
 CFLAGS=&#39;-arch i386 -arch x86_64&#39; APXSLDFLAGS=&#39;-arch i386-arch x86_64&#39; Here is a small script to do it :
 #!/bin/sh # JK_VERSION=1.2.37 curl http://mir2.ovh.net/ftp.apache.org/dist/tomcat/tomcat-connectors/jk/tomcat-connectors-${JK_VERSION}-src.tar.gz -o tomcat-connectors-${JK_VERSION}-src.tar.gz tar xvzf tomcat-connectors-${JK_VERSION}-src.tar.gz cd tomcat-connectors-${JK_VERSION}-src/native ./configure --with-apxs=/usr/sbin/apxs CFLAGS=&#39;-arch i386 -arch x86_64&#39; APXSLDFLAGS=&#39;-arch i386-arch x86_64&#39; make clean make Installation is pretty simple :
@@ -141,6 +141,9 @@ make
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/mod_jk/">Mod_jk</a></li>
+      <li><a href="http://localhost:1313/tags/osx/">OSX</a></li>
+      <li><a href="http://localhost:1313/tags/tomcat/">Tomcat</a></li>
     </ul>
   </footer>
 </article>

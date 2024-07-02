@@ -2,6 +2,7 @@
 title = 'Maven JMeter Plugin'
 date = 2010-11-04T13:20:23+02:00
 draft = false
+tags = [ 'JMeter', 'Maven' ]
 +++
 
 While playing with JMeter Maven plugin, I got some problems :

@@ -106,6 +106,22 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Tomcat Maven Plugin and Apache Tomcat Post 6.0.29
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>If you’re using the Tomcat Maven Plugin and want to use post 6.0.29 Apache Tomcat, ie latest 6.0.32, you should update your pom to handle a change in artifact.
+Up to 6.0.29, Eclipse JDT compiler was bundled as jasper-jdt :
+&lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt; &lt;artifactId&gt;jasper-jdt&lt;/artifactId&gt; &lt;version&gt;6.0.29&lt;/version&gt; &lt;/dependency&gt; With 6.0.30, Apache Tomcat team started to bundle Eclipse JDT directly:
+[xml] org.eclipse.jdt.core.compiler ecj 3.5.1 [/xml]
+As consequence, org.apache.tomcat/jasper-jdt artifact didn’t exist anymore after release 6.0.29....</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-03-11 13:20:23 +0200 +0200'>March 11, 2011</span></footer>
+  <a class="entry-link" aria-label="post link to Tomcat Maven Plugin and Apache Tomcat Post 6.0.29" href="http://localhost:1313/post/20110311-tomcat-maven-plugin-and-apache-tomcat-post-6.0.29/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenJDK 1.7 for OSX Benchs
     </h2>
   </header>
@@ -239,20 +255,6 @@ Of course, you could update Tomcat or JBoss default listen ports but you could a
   </div>
   <footer class="entry-footer"><span title='2010-09-25 13:20:23 +0200 CEST'>September 25, 2010</span></footer>
   <a class="entry-link" aria-label="post link to How to Fix HP Laserjet 1102w printerAgent Using Port 8080 on Mac ?" href="http://localhost:1313/post/20100925-how-to-fix-hp-laserjet-1102w-printeragent-using-port-8080-on-mac/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Disable Tomcat Memory Leak Detector
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>If you upgraded to Tomcat 6.0.26, you have seen this kind of message in your logs:
-May 4, 2010 5:08:46 p.m. org.apache.catalina.loader.WebappClassLoader clearReferencesThreads SEVERE: A web application Appears To Have started a thread named [Thread-8] but Has Failed to stop it. This is very Likely to create a memory leak. Or:
-May 4, 2010 3:47:09 p.m. org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc SEVERE: A web application registered the JDBC driver [com.ibm.as400.access.AS400JDBCDriver] but failed to unregister it When the web application was stopped....</p>
-  </div>
-  <footer class="entry-footer"><span title='2010-05-04 13:20:23 +0200 CEST'>May 4, 2010</span></footer>
-  <a class="entry-link" aria-label="post link to Disable Tomcat Memory Leak Detector" href="http://localhost:1313/post/20100504-disable-tomcat-memory-leak-detector/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

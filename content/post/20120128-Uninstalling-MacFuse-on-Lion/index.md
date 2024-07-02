@@ -2,6 +2,7 @@
 title = 'Uninstalling MacFuse on Lion'
 date = 2012-01-28T13:20:23+02:00
 draft = false
+tags = [ 'MacFuse', 'OSX' ]
 +++
 
 If you installed MacFuse on Lion (10.7) and tried to uninstall you may encountered the following error :

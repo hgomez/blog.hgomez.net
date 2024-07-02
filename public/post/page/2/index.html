@@ -180,6 +180,19 @@ gnu3d.dem # # $Id: 3D plot of performance # # Processes files that were created 
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Servlet Containers Startup Time
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>With the release of JBoss AS7, we see many comments around about the startup time of Application Servers. Even if this appears marginal in real life (an application server is expected to run 24/24 7/7), there is area where startup time is still important like for developpers. In developpment phase, when you have to start/stop your server dozens of times by day, you need fastest start time as possible.
+I conducted a very basic and simple test on my MacBook Pro, take various application servers and servlet containers and measure their startup time....</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-07-15 13:20:23 +0200 CEST'>July 15, 2011</span></footer>
+  <a class="entry-link" aria-label="post link to Servlet Containers Startup Time" href="http://localhost:1313/post/20110715-servlet-containers-startup-time/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Building Universal Apache Tomcat Native Library on OSX
     </h2>
   </header>
@@ -193,7 +206,7 @@ INFO: The APR based Apache Tomcat Native library which allows optimal performanc
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Apple JDK &amp; OpenJDK - Back to Benchs
+    <h2 class="entry-hint-parent">Apple JDK and OpenJDK - Back to Benchs
     </h2>
   </header>
   <div class="entry-content">
@@ -203,7 +216,7 @@ Apple Java 1.6.0_22 - java version &#34;1.6.0_22&#34; Java(TM) SE Runtime Enviro
 Apple Java 1.6.0_24 - java version &#34;1.6.0_24&#34; Java(TM) SE Runtime Environment (build 1.6.0_24-b07-348-10M3406a) Java HotSpot(TM) 64-Bit Server VM (build 19.1-b02-348, mixed mode)...</p>
   </div>
   <footer class="entry-footer"><span title='2011-04-16 13:20:23 +0200 CEST'>April 16, 2011</span></footer>
-  <a class="entry-link" aria-label="post link to Apple JDK &amp; OpenJDK - Back to Benchs" href="http://localhost:1313/post/20110416-apple-jdk-and-openjdk-back-to-benchs/"></a>
+  <a class="entry-link" aria-label="post link to Apple JDK and OpenJDK - Back to Benchs" href="http://localhost:1313/post/20110416-apple-jdk-and-openjdk-back-to-benchs/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -222,7 +235,7 @@ export CLASSPATH LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH export LD_LIBRARY_PATHAWT_TO
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Apple JDK with OpenJDK – Core2Duo vs I7
+    <h2 class="entry-hint-parent">Apple JDK and OpenJDK – Core2Duo vs I7
     </h2>
   </header>
   <div class="entry-content">
@@ -230,23 +243,7 @@ export CLASSPATH LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH export LD_LIBRARY_PATHAWT_TO
 So I redo full dacapo bench suite to include OpenJDK 6, and we have now 5 VMs (3 Java 6 and 2 Java 7) :...</p>
   </div>
   <footer class="entry-footer"><span title='2011-04-13 13:20:23 +0200 CEST'>April 13, 2011</span></footer>
-  <a class="entry-link" aria-label="post link to Apple JDK with OpenJDK – Core2Duo vs I7" href="http://localhost:1313/post/20110413-apple-jdk-with-openjdkcore2duo-vs-i7/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Tomcat Maven Plugin and Apache Tomcat Post 6.0.29
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>If you’re using the Tomcat Maven Plugin and want to use post 6.0.29 Apache Tomcat, ie latest 6.0.32, you should update your pom to handle a change in artifact.
-Up to 6.0.29, Eclipse JDT compiler was bundled as jasper-jdt :
-&lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt; &lt;artifactId&gt;jasper-jdt&lt;/artifactId&gt; &lt;version&gt;6.0.29&lt;/version&gt; &lt;/dependency&gt; With 6.0.30, Apache Tomcat team started to bundle Eclipse JDT directly:
-[xml] org.eclipse.jdt.core.compiler ecj 3.5.1 [/xml]
-As consequence, org.apache.tomcat/jasper-jdt artifact didn’t exist anymore after release 6.0.29....</p>
-  </div>
-  <footer class="entry-footer"><span title='2011-03-11 13:20:23 +0200 +0200'>March 11, 2011</span></footer>
-  <a class="entry-link" aria-label="post link to Tomcat Maven Plugin and Apache Tomcat Post 6.0.29" href="http://localhost:1313/post/20110311-tomcat-maven-plugin-and-apache-tomcat-post-6.0.29/"></a>
+  <a class="entry-link" aria-label="post link to Apple JDK and OpenJDK – Core2Duo vs I7" href="http://localhost:1313/post/20110413-apple-jdk-with-openjdkcore2duo-vs-i7/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

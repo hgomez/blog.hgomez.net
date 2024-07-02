@@ -2,6 +2,7 @@
 title = 'To SSD or Not To SSD'
 date = 2012-03-18T13:20:23+02:00
 draft = false
+tags = [ 'Benchmarks', 'SSD' ]
 +++
 
 My MacBookPro is quite old now :

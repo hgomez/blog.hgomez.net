@@ -2,6 +2,7 @@
 title = 'OpenJDK 1.7 for OSX Benchs'
 date = 2010-12-04T13:20:23+02:00
 draft = false
+tags = [ 'Benchmarks', 'OpenJDK', 'OSX'  ]
 +++
 
 After building and packaging OpenJDK 1.7 for OS/X, I wanted to see how performed new VMs.

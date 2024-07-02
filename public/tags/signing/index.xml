@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Signing on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/signing/</link>
+    <description>Recent content in Signing on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Dec 2011 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/signing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Batch Rpm Signing</title>
+      <link>http://localhost:1313/post/20111228-batch-rpm-signing/</link>
+      <pubDate>Wed, 28 Dec 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20111228-batch-rpm-signing/</guid>
+      <description>I’m using Jenkins to build RPMs with free-style scripts.
+Decent RPM packager should sign his RPMs so they could be checked by yum/zypper tools.
+Here you could be in trouble since rpm signing require a password to be passed in command line :
+rpm --addsign -D &amp;#34;_signature gpg&amp;#34; -D &amp;#34;_gpg_name packagers@myforge.org&amp;#34; RPMS/noarch/myjenkins-1.0.0-1.noarch.rpm&amp;lt;br /&amp;gt; Enter pass phrase:&amp;lt;br /&amp;gt; It’s quite problematic for a RPM build factory.
+After digging around Internet, best solution appears to be using expect and I developped a simple script for such purpose with following constraints :</description>
+    </item>
+  </channel>
+</rss>

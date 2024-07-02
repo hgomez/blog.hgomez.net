@@ -2,6 +2,7 @@
 title = 'Mountain Lion and Apxs'
 date = 2012-10-15T13:20:23+02:00
 draft = false
+tags = [ 'APXS', 'OSX' ]
 +++
 
 Mountain Lion came with a version of apxs where C compiler and pre-processor are defined to a location not in phase with XCode 4.5.
@@ -45,7 +46,6 @@ So until Apple fix apxs, you should create a symlink between real and expected l
 ```
 sudo ln -s /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain /Applications/Xcode.app/Contents/Developer/Toolchains/OSX10.8.xctoolchain
 ```
-
 
 Configure will now works as expected :
 

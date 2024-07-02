@@ -2,6 +2,7 @@
 title = 'Building Universal Apache Tomcat Connector (Mod_jk) on OSX'
 date = 2012-03-21T13:20:23+02:00
 draft = false
+tags = [ 'mod_jk', 'OSX', 'Tomcat' ]
 +++
 
 Build Universal Apache Tomcat Connector (mod_jk) for OSX follow tricks used for Apache Tomcat Native Library.

@@ -2,6 +2,7 @@
 title = 'How to Fix HP Laserjet 1102w printerAgent Using Port 8080 on Mac ?'
 date = 2010-09-25T13:20:23+02:00
 draft = false
+tags = [ 'JLaserJet', 'OSX' ]
 +++
 
 I recently bought a new Laser printer, a HP Laserjet 1102w. A very good printer bundled with a very rich firmware supporting WIFI Wep/WPA/WPA2, Bonjour, SNMP v1/v2, a web interface and much more. A definitive good choice but with a real problem for the Java developer.

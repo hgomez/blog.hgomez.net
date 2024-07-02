@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Iozone on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/iozone/</link>
+    <description>Recent content in Iozone on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Nov 2011 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/iozone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Iozone and Gnuplot 4.x</title>
+      <link>http://localhost:1313/post/20111103-iozone-and-gnuplot-4.x/</link>
+      <pubDate>Thu, 03 Nov 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20111103-iozone-and-gnuplot-4.x/</guid>
+      <description>Iozone is a great tool to mesure performance of filesystem. You could find 10 examples here.
+In it latest version, 3.97, it came with reporting tools, report.pl and gengnuplot.sh, who use gnuplot to render images. Due to changes in GnuPlot 4.x, report.pl and gnu3d.dem need to be updated to works. Also you may get only 8 metrics in reports instead of 15 expected in latest release of report.pl
+gnu3d.dem # # $Id: 3D plot of performance # # Processes files that were created by Generate_Graphs # and displays the results.</description>
+    </item>
+  </channel>
+</rss>

@@ -2,6 +2,7 @@
 title = 'VirtualBox 4.3.22 and network drives'
 date = 2015-02-23T13:20:23+02:00
 draft = false
+tags = [ 'VirtualBox' ]
 +++
 
 If you upgraded from VirtualBox 4.3.20 to 4.3.22 and use Vbox network shares, you may have noticed shares are reported as unmounted, even if they are available.

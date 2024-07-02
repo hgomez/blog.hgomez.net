@@ -2,6 +2,7 @@
 title = '20101126 - OpenJDK 1.7 for OSX Continuous Build With Hudson – Part 3'
 date = 2010-11-26T13:20:23+02:00
 draft = false
+tags = [ 'Hudson', 'OpenJDK', 'OSX' ]
 +++
 
 Gildas and I create a project on GoogleCode where we’ll maintain build/package scripts and provide packages.

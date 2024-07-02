@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>Unifying Handling of Tomcat and HTTP Error Pages | Rico&#39;s Blog</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="Httpd, Tomcat">
 <meta name="description" content="In configuration with a front Apache HTTPd 2.2.x server and backend Tomcat servers, you may have defined customs error page on the HTTPd configuration using ErrorDocument directive.
 ErrorDocument 401 /errors/err-401.html ErrorDocument 403 /errors/err-403.html ErrorDocument 404 /errors/err-404.html ErrorDocument 500 /errors/err-500.html ``` It works well for resources handled by HTTPd but errors for contents served by Tomcat are still handled by Tomcat error mecanism.
 Imagine a web application myapp, served by a Tomcat behind HTTPd, you could have the following setup.">
@@ -133,6 +133,8 @@ Imagine a web application myapp, served by a Tomcat behind HTTPd, you could have
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/httpd/">Httpd</a></li>
+      <li><a href="http://localhost:1313/tags/tomcat/">Tomcat</a></li>
     </ul>
   </footer>
 </article>

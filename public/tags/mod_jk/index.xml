@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mod_jk on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/mod_jk/</link>
+    <description>Recent content in Mod_jk on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Mar 2012 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mod_jk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Universal Apache Tomcat Connector (Mod_jk) on OSX</title>
+      <link>http://localhost:1313/post/20120321-building-universal-apache-tomcat-connector-mod_jk-on-osx/</link>
+      <pubDate>Wed, 21 Mar 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120321-building-universal-apache-tomcat-connector-mod_jk-on-osx/</guid>
+      <description>Build Universal Apache Tomcat Connector (mod_jk) for OSX follow tricks used for Apache Tomcat Native Library.
+CFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; APXSLDFLAGS=&amp;#39;-arch i386-arch x86_64&amp;#39; Here is a small script to do it :
+#!/bin/sh # JK_VERSION=1.2.37 curl http://mir2.ovh.net/ftp.apache.org/dist/tomcat/tomcat-connectors/jk/tomcat-connectors-${JK_VERSION}-src.tar.gz -o tomcat-connectors-${JK_VERSION}-src.tar.gz tar xvzf tomcat-connectors-${JK_VERSION}-src.tar.gz cd tomcat-connectors-${JK_VERSION}-src/native ./configure --with-apxs=/usr/sbin/apxs CFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; APXSLDFLAGS=&amp;#39;-arch i386-arch x86_64&amp;#39; make clean make Installation is pretty simple :
+sudo cp apache-2.0/.libs/mod_jk.so /usr/libexec/apache2/ You could then restart your Apache HTTPd server to get new mod_jk used :</description>
+    </item>
+    <item>
+      <title>Using Apache Tomcat Connector (Mod_jk) on OSX</title>
+      <link>http://localhost:1313/post/20120321-using-apache-tomcat-connector-mod_jk-on-osx/</link>
+      <pubDate>Wed, 21 Mar 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120321-using-apache-tomcat-connector-mod_jk-on-osx/</guid>
+      <description>You’ll need first mod_jk installed, follow Building Guide.
+Create /etc/apache2/other/jk.conf :
+# Load JK Module LoadModule jk_module libexec/apache2/mod_jk.so # JK workers.properties JkWorkersFile /etc/apache2/other/workers.properties # JK shared memory location JkShmFile /var/log/apache2/mod_jk.shm # JK logs JkLogFile /var/log/apache2/mod_jk.log # JK log level [debug/error/info] JkLogLevel info # JK timestamp log format JkLogStampFormat &amp;#34;[%a %b %d %H:%M:%S %Y] &amp;#34; Create /etc/apache2/other/workers.properties
+worker.list=jenkins,watch,manage # Set properties for worker jenkins (ajp13) worker.jenkins.type=ajp13 worker.jenkins.host=localhost worker.jenkins.port=8009 # status workers worker.</description>
+    </item>
+  </channel>
+</rss>

@@ -6,6 +6,238 @@
     <description>Recent content in Tags on Rico&#39;s Blog</description>
     <generator>Hugo -- 0.128.0</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 02 Mar 2015 13:20:23 +0200</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/tags/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitLab</title>
+      <link>http://localhost:1313/tags/gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CentOS</title>
+      <link>http://localhost:1313/tags/centos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/centos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Subversion</title>
+      <link>http://localhost:1313/tags/subversion/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/subversion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Java</title>
+      <link>http://localhost:1313/tags/java/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/java/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>http://localhost:1313/tags/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VirtualBox</title>
+      <link>http://localhost:1313/tags/virtualbox/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/virtualbox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>APXS</title>
+      <link>http://localhost:1313/tags/apxs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/apxs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OSX</title>
+      <link>http://localhost:1313/tags/osx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/osx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCNative</title>
+      <link>http://localhost:1313/tags/tcnative/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tcnative/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tomcat</title>
+      <link>http://localhost:1313/tags/tomcat/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/tomcat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mod_jk</title>
+      <link>http://localhost:1313/tags/mod_jk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mod_jk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Benchmarks</title>
+      <link>http://localhost:1313/tags/benchmarks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/benchmarks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSD</title>
+      <link>http://localhost:1313/tags/ssd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ssd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logo</title>
+      <link>http://localhost:1313/tags/logo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/logo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MacFuse</title>
+      <link>http://localhost:1313/tags/macfuse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/macfuse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Expect</title>
+      <link>http://localhost:1313/tags/expect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/expect/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RPM</title>
+      <link>http://localhost:1313/tags/rpm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/rpm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Signing</title>
+      <link>http://localhost:1313/tags/signing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/signing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gnuplot</title>
+      <link>http://localhost:1313/tags/gnuplot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/gnuplot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Iozone</title>
+      <link>http://localhost:1313/tags/iozone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/iozone/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performances</title>
+      <link>http://localhost:1313/tags/performances/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/performances/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JBoss</title>
+      <link>http://localhost:1313/tags/jboss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/jboss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jetty</title>
+      <link>http://localhost:1313/tags/jetty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/jetty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IntelliJ</title>
+      <link>http://localhost:1313/tags/intellij/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/intellij/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenJDK</title>
+      <link>http://localhost:1313/tags/openjdk/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/openjdk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Maven</title>
+      <link>http://localhost:1313/tags/maven/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/maven/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hudson</title>
+      <link>http://localhost:1313/tags/hudson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/hudson/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mercurial</title>
+      <link>http://localhost:1313/tags/mercurial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mercurial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JMeter</title>
+      <link>http://localhost:1313/tags/jmeter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/jmeter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Httpd</title>
+      <link>http://localhost:1313/tags/httpd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/httpd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JLaserJet</title>
+      <link>http://localhost:1313/tags/jlaserjet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/jlaserjet/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

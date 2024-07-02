@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>OSX on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/osx/</link>
+    <description>Recent content in OSX on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Oct 2012 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mountain Lion and Apxs</title>
+      <link>http://localhost:1313/post/20121015-mountain-lion-and-apxs/index.md/</link>
+      <pubDate>Mon, 15 Oct 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20121015-mountain-lion-and-apxs/index.md/</guid>
+      <description>Mountain Lion came with a version of apxs where C compiler and pre-processor are defined to a location not in phase with XCode 4.5.
+If you try to build any apxs related modules or Tomcat Native Library, it will fail like this :
+checking build system type... x86_64-apple-darwin12.2.0 checking host system type... x86_64-apple-darwin12.2.0 checking target system type... x86_64-apple-darwin12.2.0 checking for a BSD-compatible install... /usr/bin/install -c checking for working mkdir -p... yes Tomcat Native Version: 1.</description>
+    </item>
+    <item>
+      <title>Understanding Java From Command Line on OSX</title>
+      <link>http://localhost:1313/post/20120720-understanding-java-from-command-line-on-osx/</link>
+      <pubDate>Fri, 20 Jul 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120720-understanding-java-from-command-line-on-osx/</guid>
+      <description>Java on OSX OSX is a good platform for Java development but also running Java applications. Sadly XServe servers are no more available but in many cases Mac Mini could to pretty good works as Java server applications.
+For a long time, OSX Java was maintained by Apple, from Sun Hotspot and was often a bit late vs Windows/Linux releases.
+With Lion, Apple announced that they won’t produce Java for their futures OS, starting with Mountain Lion (10.</description>
+    </item>
+    <item>
+      <title>Building Universal Apache Tomcat Native Library on OSX - Updated</title>
+      <link>http://localhost:1313/post/20120613-building-universal-apache-tomcat-native-library-on-osx-updated/</link>
+      <pubDate>Wed, 13 Jun 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120613-building-universal-apache-tomcat-native-library-on-osx-updated/</guid>
+      <description>Updated build process for tomcat-connector, 1.1.24, no more APXS variable or configure parameters required
+TCN_RELEASE=1.1.24 curl http://mir2.ovh.net/ftp.apache.org/dist//tomcat/tomcat-connectors/native/$TCN_RELEASE/source/tomcat-native-$TCN_RELEASE-src.tar.gz -o tomcat-native-$TCN_RELEASE-src.tar.gz tar xvzf tomcat-native-$TCN_RELEASE-src.tar.gz cd tomcat-native-$TCN_RELEASE-src/jni/native CFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; APXSLDFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; ./configure --with-apr=/usr --with-ssl=/usr --with-java-home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home make clean make sudo cp .libs/libtcnative-1.0.1.24.dylib /usr/lib/java sudo rm -f /usr/lib/java/libtcnative-1.dylib sudo ln -s /usr/lib/java/libtcnative-1.0.1.24.dylib /usr/lib/java/libtcnative-1.dylib A note about Lion If you get Java on Lion using the java command on terminal or via the Java Developer Package for Mac OS X 10.</description>
+    </item>
+    <item>
+      <title>Building Universal Apache Tomcat Connector (Mod_jk) on OSX</title>
+      <link>http://localhost:1313/post/20120321-building-universal-apache-tomcat-connector-mod_jk-on-osx/</link>
+      <pubDate>Wed, 21 Mar 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120321-building-universal-apache-tomcat-connector-mod_jk-on-osx/</guid>
+      <description>Build Universal Apache Tomcat Connector (mod_jk) for OSX follow tricks used for Apache Tomcat Native Library.
+CFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; APXSLDFLAGS=&amp;#39;-arch i386-arch x86_64&amp;#39; Here is a small script to do it :
+#!/bin/sh # JK_VERSION=1.2.37 curl http://mir2.ovh.net/ftp.apache.org/dist/tomcat/tomcat-connectors/jk/tomcat-connectors-${JK_VERSION}-src.tar.gz -o tomcat-connectors-${JK_VERSION}-src.tar.gz tar xvzf tomcat-connectors-${JK_VERSION}-src.tar.gz cd tomcat-connectors-${JK_VERSION}-src/native ./configure --with-apxs=/usr/sbin/apxs CFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; APXSLDFLAGS=&amp;#39;-arch i386-arch x86_64&amp;#39; make clean make Installation is pretty simple :
+sudo cp apache-2.0/.libs/mod_jk.so /usr/libexec/apache2/ You could then restart your Apache HTTPd server to get new mod_jk used :</description>
+    </item>
+    <item>
+      <title>Using Apache Tomcat Connector (Mod_jk) on OSX</title>
+      <link>http://localhost:1313/post/20120321-using-apache-tomcat-connector-mod_jk-on-osx/</link>
+      <pubDate>Wed, 21 Mar 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120321-using-apache-tomcat-connector-mod_jk-on-osx/</guid>
+      <description>You’ll need first mod_jk installed, follow Building Guide.
+Create /etc/apache2/other/jk.conf :
+# Load JK Module LoadModule jk_module libexec/apache2/mod_jk.so # JK workers.properties JkWorkersFile /etc/apache2/other/workers.properties # JK shared memory location JkShmFile /var/log/apache2/mod_jk.shm # JK logs JkLogFile /var/log/apache2/mod_jk.log # JK log level [debug/error/info] JkLogLevel info # JK timestamp log format JkLogStampFormat &amp;#34;[%a %b %d %H:%M:%S %Y] &amp;#34; Create /etc/apache2/other/workers.properties
+worker.list=jenkins,watch,manage # Set properties for worker jenkins (ajp13) worker.jenkins.type=ajp13 worker.jenkins.host=localhost worker.jenkins.port=8009 # status workers worker.</description>
+    </item>
+    <item>
+      <title>Uninstalling MacFuse on Lion</title>
+      <link>http://localhost:1313/post/20120128-uninstalling-macfuse-on-lion/</link>
+      <pubDate>Sat, 28 Jan 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120128-uninstalling-macfuse-on-lion/</guid>
+      <description>If you installed MacFuse on Lion (10.7) and tried to uninstall you may encountered the following error :
+sudo /Library/Filesystems/fusefs.fs/Support/uninstall-macfuse-core.sh MacFUSE Uninstaller: Can not find the Archive.bom for MacFUSE Core package. Uninstaller didn’t check for Lion (uname -r reporting 11.x). So fix is easy, just edit uninstaller script /Library/Filesystems/fusefs.fs/Support/uninstall-macfuse-core.sh and add 11_) in case next to 10_)
+... OS_RELEASE=`/usr/bin/uname -r` case &amp;#34;$OS_RELEASE&amp;#34; in 8*) log &amp;#34;Incorrect uninstall. Use the Tiger version please.</description>
+    </item>
+    <item>
+      <title>Servlet Containers Startup Time</title>
+      <link>http://localhost:1313/post/20110715-servlet-containers-startup-time/</link>
+      <pubDate>Fri, 15 Jul 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110715-servlet-containers-startup-time/</guid>
+      <description>With the release of JBoss AS7, we see many comments around about the startup time of Application Servers. Even if this appears marginal in real life (an application server is expected to run 24/24 7/7), there is area where startup time is still important like for developpers. In developpment phase, when you have to start/stop your server dozens of times by day, you need fastest start time as possible.
+I conducted a very basic and simple test on my MacBook Pro, take various application servers and servlet containers and measure their startup time.</description>
+    </item>
+    <item>
+      <title>Building Universal Apache Tomcat Native Library on OSX</title>
+      <link>http://localhost:1313/post/20110713-building-universal-apache-tomcat-native-library-on-osx/</link>
+      <pubDate>Wed, 13 Jul 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110713-building-universal-apache-tomcat-native-library-on-osx/</guid>
+      <description>I recently notice that my Apache Tomcat running on OS/X 10.6.8 couldn’t use Apache Tomcat Native Library.
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java Jul 13, 2011 11:02:30 AM org.apache.coyote.http11.Http11Protocol init After digging around and with the help of ASFer Mladen Turk, I figure my previous build was stick to 64bits mode only and I switched my JVM to 32bits mode using -d32.</description>
+    </item>
+    <item>
+      <title>Apple JDK and OpenJDK - Back to Benchs</title>
+      <link>http://localhost:1313/post/20110416-apple-jdk-and-openjdk-back-to-benchs/</link>
+      <pubDate>Sat, 16 Apr 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110416-apple-jdk-and-openjdk-back-to-benchs/</guid>
+      <description>It’s good to see works in progress for Aqua/Cocoa - AWT ports but what about JVM performances ?
+Test vms I selected 4 VMs to be tested
+Apple Java 1.6.0_22 - java version &amp;quot;1.6.0_22&amp;quot; Java(TM) SE Runtime Environment (build 1.6.0_22-b04-314-10M3406a) Java HotSpot(TM) 64-Bit Server VM (build 17.1-b03-314, mixed mode)
+Apple Java 1.6.0_24 - java version &amp;quot;1.6.0_24&amp;quot; Java(TM) SE Runtime Environment (build 1.6.0_24-b07-348-10M3406a) Java HotSpot(TM) 64-Bit Server VM (build 19.1-b02-348, mixed mode)</description>
+    </item>
+    <item>
+      <title>OpenJDK 7 on OSX and IntelliJ IDEA EAP</title>
+      <link>http://localhost:1313/post/20110416-openjdk-7-on-osx-and-intellij-idea-eap/</link>
+      <pubDate>Sat, 16 Apr 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110416-openjdk-7-on-osx-and-intellij-idea-eap/</guid>
+      <description>During the last weeks, Apple started to contribute it’s Aqua/Cocoa port to OpenJDK 7 on the macosx-port branch. It’s still works it progress but it was nice to see some SWING apps like IntelliJ IDEA works on the preliminary release.
+I used IntelliJ IDEA EAP (10.5) and tweaked it’s startup shell.sh to define AWT_TOOLKIT=CToolkit and add -Dswing.defaultlaf=com.apple.laf.AquaLookAndFeel since Aqua Look and Feel is not default for now.
+export CLASSPATH LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH export LD_LIBRARY_PATHAWT_TOOLKIT AWT/Cocoa port for OpenJDK 7 macosx-port export=CToolkit JVM_ARGS=”-Dswing.</description>
+    </item>
+    <item>
+      <title>Apple JDK and OpenJDK – Core2Duo vs I7</title>
+      <link>http://localhost:1313/post/20110413-apple-jdk-with-openjdkcore2duo-vs-i7/</link>
+      <pubDate>Wed, 13 Apr 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110413-apple-jdk-with-openjdkcore2duo-vs-i7/</guid>
+      <description>Previously I did benchmark of Apple VMs and OpenJDK 6 and I wanted to see how all of the JVMs available today on our Mac on two systems, an old Core2Duo and a newer i7. And also see how they perform 32 / 64 bits kernel mode.
+So I redo full dacapo bench suite to include OpenJDK 6, and we have now 5 VMs (3 Java 6 and 2 Java 7) :</description>
+    </item>
+    <item>
+      <title>OpenJDK 1.7 for OSX Benchs</title>
+      <link>http://localhost:1313/post/20101204-openjdk-1.7-for-osx-benchs/</link>
+      <pubDate>Sat, 04 Dec 2010 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20101204-openjdk-1.7-for-osx-benchs/</guid>
+      <description>After building and packaging OpenJDK 1.7 for OS/X, I wanted to see how performed new VMs.
+Test vms Recents OpenJDK 1.7 32 and 64bits where used :
+openjdk version &amp;quot;1.7.0-internal&amp;quot; OpenJDK Runtime Environment (build 1.7.0-internal-henri_2010_12_01_00_46-b00) OpenJDK Server VM (build 20.0-b02, mixed mode)
+openjdk version &amp;quot;1.7.0-internal&amp;quot; OpenJDK Runtime Environment (build 1.7.0-internal-henri_2010_12_01_00_49-b00) OpenJDK 64-Bit Server VM (build 20.0-b02, mixed mode)
+Test system My test system is an Apple Mac Book Pro (MacBookPro5,1) with Intel Core 2 Duo 2.</description>
+    </item>
+    <item>
+      <title>20101126 - OpenJDK 1.7 for OSX Continuous Build With Hudson – Part 3</title>
+      <link>http://localhost:1313/post/20101126-openjdk-1.7-for-osx-continuous-build-with-hudson-part-3/</link>
+      <pubDate>Fri, 26 Nov 2010 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20101126-openjdk-1.7-for-osx-continuous-build-with-hudson-part-3/</guid>
+      <description>Gildas and I create a project on GoogleCode where we’ll maintain build/package scripts and provide packages.
+My Dropbox download page was overloaded and we needed another location, here is it :
+http://code.google.com/p/openjdk-osx-build/
+Contributors are very welcome, especially OS/X gurus</description>
+    </item>
+    <item>
+      <title>OpenJDK 1.7 for OSX Continuous Build With Hudson - Part 2</title>
+      <link>http://localhost:1313/post/20101125-openjdk-1.7-for-osx-continuous-build-with-hudson-part-2/</link>
+      <pubDate>Thu, 25 Nov 2010 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20101125-openjdk-1.7-for-osx-continuous-build-with-hudson-part-2/</guid>
+      <description>First episode of OpenJDK 1.7 for OS/X covered build of 32 and 64 bits VM via Hudson.
+We ended with two VMs, 32bits was under build/bsd-i586/j2sdk-image and 64bits in build/bsd-amd64/j2sdk-image And here appears a new OS/X jedi, Gildas, providing .PKG and .DMG scripting.
+This episode will describe how packaging, PKG and DMG was done.
+OS/X Package .PKG First we need to transform j2sdk-image folder into .PKG
+We used OS/X packagemaker, provided by XCode :</description>
+    </item>
+    <item>
+      <title>OpenJDK 1.7 for OSX Continuous Build With Hudson - Part 1</title>
+      <link>http://localhost:1313/post/20101121-openjdk-1.7-for-osx-continuous-build-with-hudson-part-1/</link>
+      <pubDate>Sun, 21 Nov 2010 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20101121-openjdk-1.7-for-osx-continuous-build-with-hudson-part-1/</guid>
+      <description>Pre-requisite an OS/X box, under Snow Leopard, 32 and 64bits mode should works XCode Mercurial with hgforest extension (see my previous article on Mercurial and hgforest) Hudson with its Mercurial Plugin Hudson jobs I created free-style software project jobs, one for building 32 bits JVM, openjdk-1.7-i586, the other to build 64 bits JVM, openjdk-1.7-x86_64.
+Each one will use self sufficient script, each script will :
+download soylatte JVMs (i386/amd64) under $HUDSON_HOME/DROP_DIR (so it could be reused for future builds).</description>
+    </item>
+    <item>
+      <title>OSX - OpenJDK 6 vs Apple JDK 6</title>
+      <link>http://localhost:1313/post/20101108-osx-openjdk-6-vs-apple-jdk-6/</link>
+      <pubDate>Mon, 08 Nov 2010 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20101108-osx-openjdk-6-vs-apple-jdk-6/</guid>
+      <description>From finished building OpenJDK 6 on OS / X Snowleopard, I wanted to test just to see how he behaved towards the implementation of Apple. I used a development version of MacPorts (see it trac) that appears very promising and got OpenJDK 1.6.0-b20.
+openjdk version &amp;quot;1.6.0&amp;quot; OpenJDK Runtime Environment (build 1.6.0-b20) OpenJDK 64-Bit Server VM (build 17.0-b16, mixed mode)
+A Java application with GUI under OS/X - OpenJDK First test was to launched a big application like Eclipse under OS/X with OpenJDK.</description>
+    </item>
+    <item>
+      <title>How to Fix HP Laserjet 1102w printerAgent Using Port 8080 on Mac ?</title>
+      <link>http://localhost:1313/post/20100925-how-to-fix-hp-laserjet-1102w-printeragent-using-port-8080-on-mac/</link>
+      <pubDate>Sat, 25 Sep 2010 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20100925-how-to-fix-hp-laserjet-1102w-printeragent-using-port-8080-on-mac/</guid>
+      <description>I recently bought a new Laser printer, a HP Laserjet 1102w. A very good printer bundled with a very rich firmware supporting WIFI Wep/WPA/WPA2, Bonjour, SNMP v1/v2, a web interface and much more. A definitive good choice but with a real problem for the Java developer.
+Why ? Because HP printer agent is using the 8080 port, the default http port for Tomcat, JBoss and others servlet engines/application servers.
+Of course, you could update Tomcat or JBoss default listen ports but you could also try to update the HP printerAgent default port.</description>
+    </item>
+  </channel>
+</rss>

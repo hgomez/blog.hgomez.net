@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>OpenJDK 7 on OSX and IntelliJ IDEA EAP | Rico&#39;s Blog</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="IntelliJ, OpenJDK, OSX">
 <meta name="description" content="During the last weeks, Apple started to contribute it’s Aqua/Cocoa port to OpenJDK 7 on the macosx-port branch. It’s still works it progress but it was nice to see some SWING apps like IntelliJ IDEA works on the preliminary release.
 I used IntelliJ IDEA EAP (10.5) and tweaked it’s startup shell.sh to define AWT_TOOLKIT=CToolkit and add -Dswing.defaultlaf=com.apple.laf.AquaLookAndFeel since Aqua Look and Feel is not default for now.
 export CLASSPATH LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH export LD_LIBRARY_PATHAWT_TOOLKIT AWT/Cocoa port for OpenJDK 7 macosx-port export=CToolkit JVM_ARGS=”-Dswing.">
@@ -132,6 +132,9 @@ cd “$IDEA_BIN_HOME” while true ; do $IDEA_JDK/bin/java $JVM_ARGS -Djb.restar
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/intellij/">IntelliJ</a></li>
+      <li><a href="http://localhost:1313/tags/openjdk/">OpenJDK</a></li>
+      <li><a href="http://localhost:1313/tags/osx/">OSX</a></li>
     </ul>
   </footer>
 </article>

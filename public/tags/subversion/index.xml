@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Subversion on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/subversion/</link>
+    <description>Recent content in Subversion on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Feb 2015 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/subversion/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CentOS &amp; RHEL and up to date Subversion and Git</title>
+      <link>http://localhost:1313/post/20150226-centos-and-rhel-and-up-to-date-subversion-and-git/</link>
+      <pubDate>Thu, 26 Feb 2015 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20150226-centos-and-rhel-and-up-to-date-subversion-and-git/</guid>
+      <description>If you’re using CentOS/RHEL 5, 6 or 7, you have noticed bundled subversion and git are quite old. It could be a problem if you need to use smart features, like Sparse Checkout. Also Jenkins Git Plugin recommand version 1.7 or higher.
+Of course, you could recompile git from sources, but it’s better to use prebuilt packages.
+Here enter Wandisco Wandisco provides up to date Subversion RPMs for CentOS 5/6/7 :</description>
+    </item>
+  </channel>
+</rss>

@@ -48,3 +48,7 @@ module:
   - source = 'images'
     target = 'static/images'
 
+taxonomies:
+  category: categories
+  tag: tags
+

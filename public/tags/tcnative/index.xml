@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TCNative on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/tcnative/</link>
+    <description>Recent content in TCNative on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Jun 2012 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tcnative/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Universal Apache Tomcat Native Library on OSX - Updated</title>
+      <link>http://localhost:1313/post/20120613-building-universal-apache-tomcat-native-library-on-osx-updated/</link>
+      <pubDate>Wed, 13 Jun 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120613-building-universal-apache-tomcat-native-library-on-osx-updated/</guid>
+      <description>Updated build process for tomcat-connector, 1.1.24, no more APXS variable or configure parameters required
+TCN_RELEASE=1.1.24 curl http://mir2.ovh.net/ftp.apache.org/dist//tomcat/tomcat-connectors/native/$TCN_RELEASE/source/tomcat-native-$TCN_RELEASE-src.tar.gz -o tomcat-native-$TCN_RELEASE-src.tar.gz tar xvzf tomcat-native-$TCN_RELEASE-src.tar.gz cd tomcat-native-$TCN_RELEASE-src/jni/native CFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; APXSLDFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; ./configure --with-apr=/usr --with-ssl=/usr --with-java-home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home make clean make sudo cp .libs/libtcnative-1.0.1.24.dylib /usr/lib/java sudo rm -f /usr/lib/java/libtcnative-1.dylib sudo ln -s /usr/lib/java/libtcnative-1.0.1.24.dylib /usr/lib/java/libtcnative-1.dylib A note about Lion If you get Java on Lion using the java command on terminal or via the Java Developer Package for Mac OS X 10.</description>
+    </item>
+    <item>
+      <title>Building Universal Apache Tomcat Native Library on OSX</title>
+      <link>http://localhost:1313/post/20110713-building-universal-apache-tomcat-native-library-on-osx/</link>
+      <pubDate>Wed, 13 Jul 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110713-building-universal-apache-tomcat-native-library-on-osx/</guid>
+      <description>I recently notice that my Apache Tomcat running on OS/X 10.6.8 couldn’t use Apache Tomcat Native Library.
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java Jul 13, 2011 11:02:30 AM org.apache.coyote.http11.Http11Protocol init After digging around and with the help of ASFer Mladen Turk, I figure my previous build was stick to 64bits mode only and I switched my JVM to 32bits mode using -d32.</description>
+    </item>
+  </channel>
+</rss>

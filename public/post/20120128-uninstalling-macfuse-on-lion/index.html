@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>Uninstalling MacFuse on Lion | Rico&#39;s Blog</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="MacFuse, OSX">
 <meta name="description" content="If you installed MacFuse on Lion (10.7) and tried to uninstall you may encountered the following error :
 sudo /Library/Filesystems/fusefs.fs/Support/uninstall-macfuse-core.sh MacFUSE Uninstaller: Can not find the Archive.bom for MacFUSE Core package. Uninstaller didn’t check for Lion (uname -r reporting 11.x). So fix is easy, just edit uninstaller script /Library/Filesystems/fusefs.fs/Support/uninstall-macfuse-core.sh and add 11_) in case next to 10_)
 ... OS_RELEASE=`/usr/bin/uname -r` case &#34;$OS_RELEASE&#34; in 8*) log &#34;Incorrect uninstall. Use the Tiger version please.">
@@ -143,6 +143,8 @@ esac
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/macfuse/">MacFuse</a></li>
+      <li><a href="http://localhost:1313/tags/osx/">OSX</a></li>
     </ul>
   </footer>
 </article>

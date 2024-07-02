@@ -1,7 +1,8 @@
 +++
-title = 'Apple JDK & OpenJDK - Back to Benchs'
+title = 'Apple JDK and OpenJDK - Back to Benchs'
 date = 2011-04-16T13:20:23+02:00
 draft = false
+tags = [ 'Benchmarks', 'OpenJDK', 'OSX'  ]
 +++
 
 It’s good to see works in progress for Aqua/Cocoa - AWT ports but what about JVM performances ?

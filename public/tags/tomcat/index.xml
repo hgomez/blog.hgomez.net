@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tomcat on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/tomcat/</link>
+    <description>Recent content in Tomcat on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Jun 2012 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tomcat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Universal Apache Tomcat Native Library on OSX - Updated</title>
+      <link>http://localhost:1313/post/20120613-building-universal-apache-tomcat-native-library-on-osx-updated/</link>
+      <pubDate>Wed, 13 Jun 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120613-building-universal-apache-tomcat-native-library-on-osx-updated/</guid>
+      <description>Updated build process for tomcat-connector, 1.1.24, no more APXS variable or configure parameters required
+TCN_RELEASE=1.1.24 curl http://mir2.ovh.net/ftp.apache.org/dist//tomcat/tomcat-connectors/native/$TCN_RELEASE/source/tomcat-native-$TCN_RELEASE-src.tar.gz -o tomcat-native-$TCN_RELEASE-src.tar.gz tar xvzf tomcat-native-$TCN_RELEASE-src.tar.gz cd tomcat-native-$TCN_RELEASE-src/jni/native CFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; APXSLDFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; ./configure --with-apr=/usr --with-ssl=/usr --with-java-home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home make clean make sudo cp .libs/libtcnative-1.0.1.24.dylib /usr/lib/java sudo rm -f /usr/lib/java/libtcnative-1.dylib sudo ln -s /usr/lib/java/libtcnative-1.0.1.24.dylib /usr/lib/java/libtcnative-1.dylib A note about Lion If you get Java on Lion using the java command on terminal or via the Java Developer Package for Mac OS X 10.</description>
+    </item>
+    <item>
+      <title>Building Universal Apache Tomcat Connector (Mod_jk) on OSX</title>
+      <link>http://localhost:1313/post/20120321-building-universal-apache-tomcat-connector-mod_jk-on-osx/</link>
+      <pubDate>Wed, 21 Mar 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120321-building-universal-apache-tomcat-connector-mod_jk-on-osx/</guid>
+      <description>Build Universal Apache Tomcat Connector (mod_jk) for OSX follow tricks used for Apache Tomcat Native Library.
+CFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; APXSLDFLAGS=&amp;#39;-arch i386-arch x86_64&amp;#39; Here is a small script to do it :
+#!/bin/sh # JK_VERSION=1.2.37 curl http://mir2.ovh.net/ftp.apache.org/dist/tomcat/tomcat-connectors/jk/tomcat-connectors-${JK_VERSION}-src.tar.gz -o tomcat-connectors-${JK_VERSION}-src.tar.gz tar xvzf tomcat-connectors-${JK_VERSION}-src.tar.gz cd tomcat-connectors-${JK_VERSION}-src/native ./configure --with-apxs=/usr/sbin/apxs CFLAGS=&amp;#39;-arch i386 -arch x86_64&amp;#39; APXSLDFLAGS=&amp;#39;-arch i386-arch x86_64&amp;#39; make clean make Installation is pretty simple :
+sudo cp apache-2.0/.libs/mod_jk.so /usr/libexec/apache2/ You could then restart your Apache HTTPd server to get new mod_jk used :</description>
+    </item>
+    <item>
+      <title>Using Apache Tomcat Connector (Mod_jk) on OSX</title>
+      <link>http://localhost:1313/post/20120321-using-apache-tomcat-connector-mod_jk-on-osx/</link>
+      <pubDate>Wed, 21 Mar 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120321-using-apache-tomcat-connector-mod_jk-on-osx/</guid>
+      <description>You’ll need first mod_jk installed, follow Building Guide.
+Create /etc/apache2/other/jk.conf :
+# Load JK Module LoadModule jk_module libexec/apache2/mod_jk.so # JK workers.properties JkWorkersFile /etc/apache2/other/workers.properties # JK shared memory location JkShmFile /var/log/apache2/mod_jk.shm # JK logs JkLogFile /var/log/apache2/mod_jk.log # JK log level [debug/error/info] JkLogLevel info # JK timestamp log format JkLogStampFormat &amp;#34;[%a %b %d %H:%M:%S %Y] &amp;#34; Create /etc/apache2/other/workers.properties
+worker.list=jenkins,watch,manage # Set properties for worker jenkins (ajp13) worker.jenkins.type=ajp13 worker.jenkins.host=localhost worker.jenkins.port=8009 # status workers worker.</description>
+    </item>
+    <item>
+      <title>Servlet Containers Startup Time</title>
+      <link>http://localhost:1313/post/20110715-servlet-containers-startup-time/</link>
+      <pubDate>Fri, 15 Jul 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110715-servlet-containers-startup-time/</guid>
+      <description>With the release of JBoss AS7, we see many comments around about the startup time of Application Servers. Even if this appears marginal in real life (an application server is expected to run 24/24 7/7), there is area where startup time is still important like for developpers. In developpment phase, when you have to start/stop your server dozens of times by day, you need fastest start time as possible.
+I conducted a very basic and simple test on my MacBook Pro, take various application servers and servlet containers and measure their startup time.</description>
+    </item>
+    <item>
+      <title>Building Universal Apache Tomcat Native Library on OSX</title>
+      <link>http://localhost:1313/post/20110713-building-universal-apache-tomcat-native-library-on-osx/</link>
+      <pubDate>Wed, 13 Jul 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110713-building-universal-apache-tomcat-native-library-on-osx/</guid>
+      <description>I recently notice that my Apache Tomcat running on OS/X 10.6.8 couldn’t use Apache Tomcat Native Library.
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java Jul 13, 2011 11:02:30 AM org.apache.coyote.http11.Http11Protocol init After digging around and with the help of ASFer Mladen Turk, I figure my previous build was stick to 64bits mode only and I switched my JVM to 32bits mode using -d32.</description>
+    </item>
+    <item>
+      <title>Tomcat Maven Plugin and Apache Tomcat Post 6.0.29</title>
+      <link>http://localhost:1313/post/20110311-tomcat-maven-plugin-and-apache-tomcat-post-6.0.29/</link>
+      <pubDate>Fri, 11 Mar 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110311-tomcat-maven-plugin-and-apache-tomcat-post-6.0.29/</guid>
+      <description>If you’re using the Tomcat Maven Plugin and want to use post 6.0.29 Apache Tomcat, ie latest 6.0.32, you should update your pom to handle a change in artifact.
+Up to 6.0.29, Eclipse JDT compiler was bundled as jasper-jdt :
+&amp;lt;groupId&amp;gt;org.apache.tomcat&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;jasper-jdt&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;6.0.29&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; With 6.0.30, Apache Tomcat team started to bundle Eclipse JDT directly:
+[xml] org.eclipse.jdt.core.compiler ecj 3.5.1 [/xml]
+As consequence, org.apache.tomcat/jasper-jdt artifact didn’t exist anymore after release 6.0.29.</description>
+    </item>
+    <item>
+      <title>Unifying Handling of Tomcat and HTTP Error Pages</title>
+      <link>http://localhost:1313/post/20101024-unifying-handling-of-tomcat-and-http-error-pages/</link>
+      <pubDate>Sun, 24 Oct 2010 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20101024-unifying-handling-of-tomcat-and-http-error-pages/</guid>
+      <description>In configuration with a front Apache HTTPd 2.2.x server and backend Tomcat servers, you may have defined customs error page on the HTTPd configuration using ErrorDocument directive.
+ErrorDocument 401 /errors/err-401.html ErrorDocument 403 /errors/err-403.html ErrorDocument 404 /errors/err-404.html ErrorDocument 500 /errors/err-500.html ``` It works well for resources handled by HTTPd but errors for contents served by Tomcat are still handled by Tomcat error mecanism.
+Imagine a web application myapp, served by a Tomcat behind HTTPd, you could have the following setup.</description>
+    </item>
+    <item>
+      <title>Disable Tomcat Memory Leak Detector</title>
+      <link>http://localhost:1313/post/20100504-disable-tomcat-memory-leak-detector/</link>
+      <pubDate>Tue, 04 May 2010 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20100504-disable-tomcat-memory-leak-detector/</guid>
+      <description>If you upgraded to Tomcat 6.0.26, you have seen this kind of message in your logs:
+May 4, 2010 5:08:46 p.m. org.apache.catalina.loader.WebappClassLoader clearReferencesThreads SEVERE: A web application Appears To Have started a thread named [Thread-8] but Has Failed to stop it. This is very Likely to create a memory leak. Or:
+May 4, 2010 3:47:09 p.m. org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc SEVERE: A web application registered the JDBC driver [com.ibm.as400.access.AS400JDBCDriver] but failed to unregister it When the web application was stopped.</description>
+    </item>
+  </channel>
+</rss>

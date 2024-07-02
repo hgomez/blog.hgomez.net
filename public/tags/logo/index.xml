@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Logo on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/logo/</link>
+    <description>Recent content in Logo on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Feb 2012 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/logo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevOps Logo - 2nd Try</title>
+      <link>http://localhost:1313/post/20120220-devops-logo-2nd-try/</link>
+      <pubDate>Mon, 20 Feb 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120220-devops-logo-2nd-try/</guid>
+      <description>Here is the second try of logos for DevOps, still provided by Sabrina (@saabpii). She carefully tracked comments here and on Twitter :
+Please vote for your preferred one.</description>
+    </item>
+    <item>
+      <title>DevOps Logo</title>
+      <link>http://localhost:1313/post/20120208-devops-logos/</link>
+      <pubDate>Wed, 08 Feb 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20120208-devops-logos/</guid>
+      <description>I asked some times ago Sabrina Perrin (@saabpii) a great graphic designer I worked with for years, if she could try to works on some DevOps logo.
+As expected she has been very motivated and inspired.
+Here are the results :
+Now I need you to comments and votes for them.
+All of this artwork is free to use, just mention Sabrina somewhere on your sites/blogs/presentations.
+Thanks again Sabrina !</description>
+    </item>
+  </channel>
+</rss>

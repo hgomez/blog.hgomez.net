@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>Using Apache Tomcat Connector (Mod_jk) on OSX | Rico&#39;s Blog</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="mod_jk, OSX, Tomcat">
 <meta name="description" content="You’ll need first mod_jk installed, follow Building Guide.
 Create /etc/apache2/other/jk.conf :
 # Load JK Module LoadModule jk_module libexec/apache2/mod_jk.so # JK workers.properties JkWorkersFile /etc/apache2/other/workers.properties # JK shared memory location JkShmFile /var/log/apache2/mod_jk.shm # JK logs JkLogFile /var/log/apache2/mod_jk.log # JK log level [debug/error/info] JkLogLevel info # JK timestamp log format JkLogStampFormat &#34;[%a %b %d %H:%M:%S %Y] &#34; Create /etc/apache2/other/workers.properties
@@ -165,6 +165,9 @@ worker.manage.mount=/admin/status/jk
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/mod_jk/">Mod_jk</a></li>
+      <li><a href="http://localhost:1313/tags/osx/">OSX</a></li>
+      <li><a href="http://localhost:1313/tags/tomcat/">Tomcat</a></li>
     </ul>
   </footer>
 </article>

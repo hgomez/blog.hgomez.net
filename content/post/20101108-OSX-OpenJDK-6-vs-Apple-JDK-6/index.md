@@ -2,6 +2,7 @@
 title = 'OSX - OpenJDK 6 vs Apple JDK 6'
 date = 2010-11-08T13:20:23+02:00
 draft = false
+tags = [ 'OpenJDK', 'OSX' ]
 +++
 
 From finished building OpenJDK 6 on OS / X Snowleopard, I wanted to test just to see how he behaved towards the implementation of Apple. I used a development version of MacPorts ([see it trac](https://trac.macports.org/ticket/20956)) that appears very promising and got OpenJDK 1.6.0-b20.

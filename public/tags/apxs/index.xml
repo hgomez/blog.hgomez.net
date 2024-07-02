@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>APXS on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/apxs/</link>
+    <description>Recent content in APXS on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Oct 2012 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/apxs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mountain Lion and Apxs</title>
+      <link>http://localhost:1313/post/20121015-mountain-lion-and-apxs/index.md/</link>
+      <pubDate>Mon, 15 Oct 2012 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20121015-mountain-lion-and-apxs/index.md/</guid>
+      <description>Mountain Lion came with a version of apxs where C compiler and pre-processor are defined to a location not in phase with XCode 4.5.
+If you try to build any apxs related modules or Tomcat Native Library, it will fail like this :
+checking build system type... x86_64-apple-darwin12.2.0 checking host system type... x86_64-apple-darwin12.2.0 checking target system type... x86_64-apple-darwin12.2.0 checking for a BSD-compatible install... /usr/bin/install -c checking for working mkdir -p... yes Tomcat Native Version: 1.</description>
+    </item>
+  </channel>
+</rss>

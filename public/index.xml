@@ -153,6 +153,14 @@ In it latest version, 3.97, it came with reporting tools, report.pl and gengnupl
 gnu3d.dem # # $Id: 3D plot of performance # # Processes files that were created by Generate_Graphs # and displays the results.</description>
     </item>
     <item>
+      <title>Servlet Containers Startup Time</title>
+      <link>http://localhost:1313/post/20110715-servlet-containers-startup-time/</link>
+      <pubDate>Fri, 15 Jul 2011 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20110715-servlet-containers-startup-time/</guid>
+      <description>With the release of JBoss AS7, we see many comments around about the startup time of Application Servers. Even if this appears marginal in real life (an application server is expected to run 24/24 7/7), there is area where startup time is still important like for developpers. In developpment phase, when you have to start/stop your server dozens of times by day, you need fastest start time as possible.
+I conducted a very basic and simple test on my MacBook Pro, take various application servers and servlet containers and measure their startup time.</description>
+    </item>
+    <item>
       <title>Building Universal Apache Tomcat Native Library on OSX</title>
       <link>http://localhost:1313/post/20110713-building-universal-apache-tomcat-native-library-on-osx/</link>
       <pubDate>Wed, 13 Jul 2011 13:20:23 +0200</pubDate>
@@ -161,7 +169,7 @@ gnu3d.dem # # $Id: 3D plot of performance # # Processes files that were created 
 INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java Jul 13, 2011 11:02:30 AM org.apache.coyote.http11.Http11Protocol init After digging around and with the help of ASFer Mladen Turk, I figure my previous build was stick to 64bits mode only and I switched my JVM to 32bits mode using -d32.</description>
     </item>
     <item>
-      <title>Apple JDK &amp; OpenJDK - Back to Benchs</title>
+      <title>Apple JDK and OpenJDK - Back to Benchs</title>
       <link>http://localhost:1313/post/20110416-apple-jdk-and-openjdk-back-to-benchs/</link>
       <pubDate>Sat, 16 Apr 2011 13:20:23 +0200</pubDate>
       <guid>http://localhost:1313/post/20110416-apple-jdk-and-openjdk-back-to-benchs/</guid>
@@ -180,7 +188,7 @@ I used IntelliJ IDEA EAP (10.5) and tweaked it’s startup shell.sh to define AW
 export CLASSPATH LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH export LD_LIBRARY_PATHAWT_TOOLKIT AWT/Cocoa port for OpenJDK 7 macosx-port export=CToolkit JVM_ARGS=”-Dswing.</description>
     </item>
     <item>
-      <title>Apple JDK with OpenJDK – Core2Duo vs I7</title>
+      <title>Apple JDK and OpenJDK – Core2Duo vs I7</title>
       <link>http://localhost:1313/post/20110413-apple-jdk-with-openjdkcore2duo-vs-i7/</link>
       <pubDate>Wed, 13 Apr 2011 13:20:23 +0200</pubDate>
       <guid>http://localhost:1313/post/20110413-apple-jdk-with-openjdkcore2duo-vs-i7/</guid>

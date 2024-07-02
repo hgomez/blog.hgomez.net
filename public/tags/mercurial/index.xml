@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mercurial on Rico&#39;s Blog</title>
+    <link>http://localhost:1313/tags/mercurial/</link>
+    <description>Recent content in Mercurial on Rico&#39;s Blog</description>
+    <generator>Hugo -- 0.128.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Nov 2010 13:20:23 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mercurial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forest Extension Fixes for Mercurial 1.7</title>
+      <link>http://localhost:1313/post/20101116-forest-extension-fixes-for-mercurial-1.7/</link>
+      <pubDate>Tue, 16 Nov 2010 13:20:23 +0200</pubDate>
+      <guid>http://localhost:1313/post/20101116-forest-extension-fixes-for-mercurial-1.7/</guid>
+      <description>I’m using Mercurial 1.7 from MacPorts to sync with OpenJDK sources. This operation is usually done with hg fclone
+[bash] hg fclone http://hg.openjdk.java.net/bsd-port/bsd-port [/bash]
+fclone came from forest
+Mercurial 1.7 changes some API and call to do_read should be changed to _call.
+Hopefully, I found a maintained Forest for Mercurial by GXTI and they now handle correctly pre/post Mercurial 1.6 or 1.7.
+To install this updated extension.
+hg clone https://bitbucket.org/gxti/hgforest Make sure this forest.</description>
+    </item>
+  </channel>
+</rss>

@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
 <title>Building Universal Apache Tomcat Native Library on OSX - Updated | Rico&#39;s Blog</title>
-<meta name="keywords" content="">
+<meta name="keywords" content="OSX, TCNative, Tomcat">
 <meta name="description" content="Updated build process for tomcat-connector, 1.1.24, no more APXS variable or configure parameters required
 TCN_RELEASE=1.1.24 curl http://mir2.ovh.net/ftp.apache.org/dist//tomcat/tomcat-connectors/native/$TCN_RELEASE/source/tomcat-native-$TCN_RELEASE-src.tar.gz -o tomcat-native-$TCN_RELEASE-src.tar.gz tar xvzf tomcat-native-$TCN_RELEASE-src.tar.gz cd tomcat-native-$TCN_RELEASE-src/jni/native CFLAGS=&#39;-arch i386 -arch x86_64&#39; APXSLDFLAGS=&#39;-arch i386 -arch x86_64&#39; ./configure --with-apr=/usr --with-ssl=/usr --with-java-home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home make clean make sudo cp .libs/libtcnative-1.0.1.24.dylib /usr/lib/java sudo rm -f /usr/lib/java/libtcnative-1.dylib sudo ln -s /usr/lib/java/libtcnative-1.0.1.24.dylib /usr/lib/java/libtcnative-1.dylib A note about Lion If you get Java on Lion using the java command on terminal or via the Java Developer Package for Mac OS X 10.">
 <meta name="author" content="">
@@ -149,6 +149,9 @@ sudo ln -s /usr/lib/java/libtcnative-1.0.dylib /usr/lib/java/libtcnative-1.dylib
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/osx/">OSX</a></li>
+      <li><a href="http://localhost:1313/tags/tcnative/">TCNative</a></li>
+      <li><a href="http://localhost:1313/tags/tomcat/">Tomcat</a></li>
     </ul>
   </footer>
 </article>

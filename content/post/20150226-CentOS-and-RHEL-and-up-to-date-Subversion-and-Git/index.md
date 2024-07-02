@@ -2,6 +2,7 @@
 title = 'CentOS & RHEL and up to date Subversion and Git'
 date = 2015-02-26T13:20:23+02:00
 draft = false
+tags = [ 'CentOS', 'Git', 'Subversion' ]
 +++
 
 If you’re using CentOS/RHEL 5, 6 or 7, you have noticed bundled subversion and git are quite old. It could be a problem if you need to use smart features, like Sparse Checkout. Also Jenkins Git Plugin recommand version 1.7 or higher.

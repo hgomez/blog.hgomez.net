@@ -2,6 +2,7 @@
 title = 'Batch Rpm Signing'
 date = 2011-12-28T13:20:23+02:00
 draft = false
+tags = [ 'Expect', 'RPM', 'Signing' ]
 +++
 
 I’m using [Jenkins](http://jenkins-ci.org/) to build RPMs with free-style scripts.
