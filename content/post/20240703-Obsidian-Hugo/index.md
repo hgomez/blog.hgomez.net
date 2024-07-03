@@ -37,7 +37,8 @@ For example :
 I only have to copy Obsidian blog contents under `content/post` directory in Hugo
 
 ```
-cp -rf ~/Documents/Perso/obsidian-hgomez/Blog/blog.hgomez.net/* ~/Documents/Perso/blog.hgomez.net/content/post/
+cp -rf ~/Documents/Perso/obsidian-hgomez/Blog/blog.hgomez.net/* \
+       ~/Documents/Perso/blog.hgomez.net/content/post/
 ```
 
 With this structure, you have a working copy of your blog in Obsidian with Hugo hosting elsewhere, your Obsidian and Hugo are totaly separated and can have their own lifecycle.
