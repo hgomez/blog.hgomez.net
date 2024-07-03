@@ -1,7 +1,8 @@
 baseURL: https://blog.hgomez.net/
 languageCode: en-us
 title: Rico's Blog
-theme: ["PaperMod"]
+#theme: ["PaperMod"]
+theme: ["hugo-theme-stack"]
 
 enableEmoji: true
 
