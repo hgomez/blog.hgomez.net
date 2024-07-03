@@ -26,23 +26,23 @@ It was quite simple.
 Obsidian create a titlte.md file, so your title will be **index** and you enter the blog metadata contents as expected by Hugo
 
 ![index](obsidian-2.png)
-That's all, your document have the structure expected by Hugo.
-You can edit your file and when done, copy it to your Hugo directory.
+That's it! Your document now has the structure expected by Hugo. You can edit your file and, when finished, copy it to your Hugo directory.
 
-For example :
+For example:
 
-* Obsidian blog contents is hosted under `$HOME/Documents/Perso/Blog/blog.hgomez.net`
-* Hugo blog is hosted under `$HOME/Documents/Perso/blog.hgomez.net`
+- Obsidian blog content is hosted under `$HOME/Documents/Perso/Blog/blog.hgomez.net`
+- Hugo blog is hosted under `$HOME/Documents/Perso/blog.hgomez.net`
 
-I only have to copy Obsidian blog contents under `content/post` directory in Hugo
+In this case, you only need to copy your Obsidian blog content folder to the `content/post` directory in Hugo.
+
+Here's the command:
 
 ```
 cp -rf ~/Documents/Perso/obsidian-hgomez/Blog/blog.hgomez.net/* \
        ~/Documents/Perso/blog.hgomez.net/content/post/
 ```
 
-With this structure, you have a working copy of your blog in Obsidian with Hugo hosting elsewhere, your Obsidian and Hugo are totaly separated and can have their own lifecycle.
-
+With this structure, you have a working copy of your blog in Obsidian, while Hugo handles hosting elsewhere. This keeps your Obsidian and Hugo environments completely separate and allows them to have independent lifecycles.
 ### Side notes 
 
 * Obsidian craft images links this way : 
@@ -52,4 +52,4 @@ With this structure, you have a working copy of your blog in Obsidian with Hugo 
 
 ![md-linkl](obisdian-mdflink.png.png)
 
-* Hugo won't produce pages where date is set in the future, when editing your date in blog post, be sure to have something set in the past 😇
+* Hugo won't generate pages where the date is set in the future. When editing your blog post dates, be sure to use a date in the past. 😇
