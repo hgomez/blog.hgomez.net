@@ -5,14 +5,13 @@ draft = false
 tags = [ 'SRE', 'Talk' ]
 +++
 
-A first, my blog was hosted on Wordpress.
+At first, my blog was hosted on WordPress.
 
-There was so many attacks attempts on the wordpress powered sites I worked on that, I deviced to move to something simple, [Octopress](http://octopress.org/).
+There were so many attack attempts on the WordPress-powered sites I worked on that I decided to move to something simpler, [Octopress](http://octopress.org/).
 
-Octopress incidently turned End Of Life in 2015, so I had to move to something else, [Hubpress](https://github.com/HubPress) who was stopped in 2019.
+Incidentally, Octopress reached End of Life in 2015, so I had to move to something else. I chose [HubPress](https://github.com/HubPress), which unfortunately stopped development in 2019.
 
-And for a few years, blog was waiting for a new engine, here enter [Hugo](https://gohugo.io/), a well-supported engine, with a lot of plugins and themes, and whereGitHub Pages integration is very simple via GitHub Action.  
-
+For a few years, my blog was waiting for a new engine. Then came [Hugo](https://gohugo.io/), a well-supported engine with a lot of plugins and themes. Additionally, Hugo integrates very simply with GitHub Pages via GitHub Actions.
 ## Install Hugo
 
 I installed Hugo using the [asdf](https://asdf-vm.com/)
@@ -40,10 +39,10 @@ asdf global hugo extended_0.128.0
 
 ## Blog Theme - PaperMode
 
-There is really a lot of themes with Hugo, I decided to go with something simple, [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
-I tried the latest released version, 7.0, Feb 2023, but it didn't worked as expected, so I moved to the latest version in master (something I always try to avoid)
-  
+There are a **really large number** of themes available for Hugo. I decided to choose something simple, [PaperMod](https://github.com/adityatelange/hugo-PaperMod).
 
+I tried the latest released version, 7.0 (February 2023), but it didn't work as expected. So, I switched to the latest version in the master branch (something I always try to avoid).
+ 
 ```
 mkdir Documents/Perso
 hugo new site blog.hgomez.net
@@ -59,9 +58,10 @@ cd ..
 # Housekeeping :)
 rm -f master.zip
 rm -f hugo.toml 
+touch hugo.yaml
 ```
-Default configuration, in yaml file
 
+Default configuration, in hugo.yaml file
 ```title=hugo.yaml
 baseURL: https://blog.hgomez.net/
 languageCode: en-us
@@ -126,4 +126,4 @@ Press Ctrl+C to stop
 
 Quite promising so far 😉
 
-We'll see next time how bring contents, expose blog in GitHub pages and get a free tracking without GoogleAnalytics.
+In the next part, we'll explore how to migrate your content, publish your blog on GitHub Pages, and set up free website tracking without relying on Google Analytics.
