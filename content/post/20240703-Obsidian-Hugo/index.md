@@ -43,4 +43,13 @@ cp -rf ~/Documents/Perso/obsidian-hgomez/Blog/blog.hgomez.net/* \
 
 With this structure, you have a working copy of your blog in Obsidian with Hugo hosting elsewhere, your Obsidian and Hugo are totaly separated and can have their own lifecycle.
 
-⚠ Hugo won't produce pages where date is set in the future, when editing your date in blog post, be sure to have something set in the past 😇
+### Side notes 
+
+* Obsidian craft images links this way : 
+
+![[obisdian-deflink.png]]
+	For Hugo, you should rework them the Markdown way
+
+![[obisdian-mdflink.png.png]]
+
+* Hugo won't produce pages where date is set in the future, when editing your date in blog post, be sure to have something set in the past 😇
