@@ -1,8 +1,8 @@
 +++
 title = 'New Blog using Hugo'
-date = 2024-06-24T13:20:23+02:00
+date = 2024-07-02T13:20:23+02:00
 draft = false
-tags = [ 'SRE', 'Talk' ]
+tags = [ 'asdf', 'Blog', 'Hugo' ]
 +++
 
 At first, my blog was hosted on WordPress.
