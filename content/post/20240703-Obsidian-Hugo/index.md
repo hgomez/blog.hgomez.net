@@ -47,9 +47,9 @@ With this structure, you have a working copy of your blog in Obsidian with Hugo 
 
 * Obsidian craft images links this way : 
 
-![[obisdian-deflink.png]]
+![defaut-link](obisdian-deflink.png)
 	For Hugo, you should rework them the Markdown way
 
-![[obisdian-mdflink.png.png]]
+![md-linkl](obisdian-mdflink.png.png)
 
 * Hugo won't produce pages where date is set in the future, when editing your date in blog post, be sure to have something set in the past 😇
