@@ -1,72 +1,221 @@
-baseURL: https://blog.hgomez.net/
-languageCode: en-us
-title: Rico's Blog
+#
+# Config
+#
+baseURL: "https://blog.hgomez.net/"
+languageCode: "en-us"
+title: "Rico's Blog"
 #theme: ["PaperMod"]
 theme: ["hugo-theme-stack"]
+hasCJKLanguage: false
+disqusShortname: "thericosblog"
+paginate: 5
+defaultContentLanguage: "en"
 
-enableEmoji: true
+#
+# Markdown renderer configuration
+#
+goldmark:
+  renderer:
+    unsafe: true
 
-params:
+tableOfContents:
+  endLevel: 4
+  ordered: true
+  startLevel: 2
 
-  defaultTheme: auto
+highlight:
+  noClasses: false
+  codeFences: true
+  guessSyntax: true
+  lineNoStart: 1
+  lineNos: true
+  lineNumbersInTable: true
+  tabWidth: 4
 
-  homeInfoParams:
-    Title: Welcome to Rico's Blog
-    Content: OSS activist, ASF Member, former Tomcat contributor, founder of JPackage, DevOps Incubator and OBuildFactory projects. Dev, QA and Ops. 
-
-  profileMode:
-    enabled: false
-    title: "Rico's Blog"
-    subtitle: "Welcome to Rico's Blog"
-    imageUrl: "https://avatars3.githubusercontent.com/u/274370"
-    imageTitle: "hgomez icon"
-    imageWidth: 120
-    imageHeight: 120
-
-
-  socialIcons: 
-    - name: "X"
-      url: "https://x.com/hgomez"
-    - name: "GitHub"
-      url: "https://github.com/hgomez/"
-    - name: "LinkedIn"
-      url: "https://fr.linkedin.com/in/gomezhe"
-
-  ShowShareButtons: false
-  ShowReadingTime: true
-  ShowPostNavLinks: true
-  ShowCodeCopyButtons: true
-
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
-
+#
+# Configure main menu and social menu
+#
 menu:
+  social:
+    - identifier: "github"
+      name: "GitHub"
+      url: "https://github.com/hgomez"
+      params:
+        icon: brand-github
+    - identifier: "twitter"
+      name: "X"
+      url: "https://x.com/hgomez"
+      params:
+        icon: "brand-twitter"
+    - identifier: "linkedin"
+      name: "LinkedIn"
+      url: "https://fr.linkedin.com/in/gomezhe"
+      params:
+        icon: "brand-linkedin"
   main:
-    - name: archives
-      pageRef: /archive
-      weight: 30
-    - name: articles
-      url: /
-      weight: 30
-    - name: tags
-      pageRef: /tags
-      weight: 30
-    - name: search
-      pageRef: /search
-      weight: 30
+    - identifier: "aboutme"
+      name: "About Me"
+      url: "/aboutme"
+      params:
+       icon: "user"
+    - identifier: ""
+      name: "Home"
+      url: "/"
+      params:
+       icon: "home"
+    - identifier: "archives"
+      name: "Archives"
+      url: "/archives"
+      params:
+       icon: "archives"
+    - identifier: "search"
+      name: "Search"
+      url: "/search"
+      params:
+       icon: "search"
+
+#
+# Params
+#
+params:
+  mainSections:
+    - post
+  rssFullContent: true
+  favicon: /favicon.png
+  footer:
+    since: 2010
+    customText: ""
+  dateFormat:
+    published: Jan 02, 2006
+    lastUpdated: Jan 02, 2006 15:04 MST
+  sidebar:
+    subtitle: Tech Advisor, OSS Advocate, Dev, QA and Ops.
+    avatar:
+      enabled: true
+      local: true
+      src: img/avatar.png
+  article:
+    headingAnchor: false
+    math: false
+    readingTime: true
+    license:
+      enabled: false
+      default: Licensed under CC BY-NC-SA 4.0
+  widgets:
+    homepage:
+#      - type: search
+#      - type: archives
+#        params:
+#          limit: 5
+      - type: categories
+        params:
+          limit: 5
+      - type: tag-cloud
+        params:
+          limit: 10
+    page:
+      - type: toc
+  opengraph:
+    twitter:
+      site: ""
+      card: summary_large_image
+  defaultImage:
+    opengraph:
+      enabled: false
+      local: false
+      src: ""
+  colorScheme:
+    toggle: true
+    default: auto
+  imageProcessing:
+    cover:
+      enabled: true
+    content:
+      enabled: true
+  comments:
+    enabled: true
+    provider: disqus
+    disqusjs:
+      shortname: ""
+      apiUrl: ""
+      apiKey: ""
+      admin: ""
+      adminLabel: ""
+    utterances:
+      repo: ""
+      issueTerm: pathname
+      label: ""
+    remark42:
+      host: ""
+      site: ""
+      locale: ""
+    vssue:
+      platform: ""
+      owner: ""
+      repo: ""
+      clientId: ""
+      clientSecret: ""
+      autoCreateIssue: false
+    waline:
+      serverURL: ""
+      lang: ""
+      visitor: ""
+      avatar: ""
+      emoji:
+        - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
+      requiredMeta:
+        - name
+        - email
+        - url
+      placeholder: ""
+      locale:
+        admin: Admin
+    twikoo:
+      envId: ""
+      region: ""
+      path: ""
+      lang: ""
+    cactus:
+      defaultHomeserverUrl: https://matrix.cactus.chat:8448
+      serverName: cactus.chat
+      siteName: ""
+    giscus:
+      repo: ""
+      repoID: ""
+      category: ""
+      categoryID: ""
+      mapping: ""
+      lightTheme: ""
+      darkTheme: ""
+      reactionsEnabled: 1
+      emitMetadata: 0
+    gitalk:
+      owner: ""
+      admin: ""
+      repo: ""
+      clientID: ""
+      clientSecret: ""
+    cusdis:
+      host: ""
+      id: ""
+
+# Permalinks format of each content section
+permarlink:
+  post: "/p/:slug/"
+  page: "/:slug/"
+
+# Related contents configuration
+related: 
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: "tags"
+      weight: 100
+    - name: "categories"
+      weight: 200
 
 module:
-  mount:
-  - source = 'static'
-    target = 'static'
-  - source = 'images'
-    target = 'static/images'
-
-taxonomies:
-  category: categories
-  tag: tags
-
+  imports: 
+    - path: hugo-theme-stack
 

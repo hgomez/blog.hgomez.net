@@ -3,6 +3,8 @@ title = 'Obsidian and Hugo'
 date = 2024-07-03T03:20:23+02:00
 draft = false
 tags = [ 'Hugo', 'Obsidian' ]
+image = '2023_Obsidian_logo.png'
+categories = [ 'Blog' ]
 +++
 
 	

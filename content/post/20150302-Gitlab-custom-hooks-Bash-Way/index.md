@@ -3,6 +3,8 @@ title = 'Gitlab custom hooks - Bash Way'
 date = 2015-03-02T13:20:23+02:00
 draft = false
 tags = [ 'Git', 'GitLab' ]
+categories = [ 'CI' ]
+image = 'gitlab-hook.png'
 +++
 
 If you’re using Gitlab, you may know you could use custom hooks to validate contents. Everything is detailed in [http://doc.gitlab.com/ce/hooks/custom_hooks.html](http://doc.gitlab.com/ce/hooks/custom_hooks.html)

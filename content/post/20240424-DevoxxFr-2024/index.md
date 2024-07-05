@@ -2,12 +2,15 @@
 title = 'Devoxx France 2024'
 date = 2024-04-24T13:20:23+02:00
 draft = false
-tags = [ 'DevOps', 'Talk' ]
+tags = [ 'DevOps', 'Talk', 'DevoxxFrance' ]
+categories = [ 'Conference' ]
+image = 'devoxx-france-2024.jpg'
 +++
 
 **A Decade of DevOps: A Retrospective and Look to the Future**
 
 ![devopsmercs](devopsmercs-devoxxfr2024.png)
+
 **Introduction:**
 
 A decade ago, in 2013, five of us stood on the Devoxx France stage to discuss an emerging topic: DevOps. As the "DevOps Mercenaries" - Dimitri Baeli, Arnaud Héritier, Pierre Antoine Grégoire, Gildas Cuisinier, and myself - we led a 3-hour workshop using a real-world case study of an ephemeral content transfer application. We demonstrated how to implement this project within a DevOps context.

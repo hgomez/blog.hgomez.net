@@ -2,7 +2,9 @@
 title = 'New Blog using Hugo'
 date = 2024-07-02T13:20:23+02:00
 draft = false
-tags = [ 'asdf', 'Blog', 'Hugo' ]
+tags = [ 'asdf', 'Hugo' ]
+image = 'hugo-logo-wide.svg'
+categories = [ 'Blog' ]
 +++
 
 At first, my blog was hosted on WordPress.
