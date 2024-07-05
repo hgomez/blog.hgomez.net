@@ -55,7 +55,7 @@ menu:
   main:
     - identifier: "aboutme"
       name: "About Me"
-      url: "/aboutme"
+      url: "/aboutme/"
       params:
        icon: "user"
     - identifier: ""
@@ -65,12 +65,12 @@ menu:
        icon: "home"
     - identifier: "archives"
       name: "Archives"
-      url: "/archives"
+      url: "/archives/"
       params:
        icon: "archives"
     - identifier: "search"
       name: "Search"
-      url: "/search"
+      url: "/search/"
       params:
        icon: "search"
 
