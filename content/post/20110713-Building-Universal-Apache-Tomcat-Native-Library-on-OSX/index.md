@@ -3,6 +3,8 @@ title = 'Building Universal Apache Tomcat Native Library on OSX'
 date = 2011-07-13T13:20:23+02:00
 draft = false
 tags = [ 'TCNative', 'OSX', 'Tomcat'  ]
+categories = [ 'OS' ]
+image = 'showtomcat.png'
 +++
 
 I recently notice that my Apache Tomcat running on OS/X 10.6.8 couldn’t use Apache Tomcat Native Library.

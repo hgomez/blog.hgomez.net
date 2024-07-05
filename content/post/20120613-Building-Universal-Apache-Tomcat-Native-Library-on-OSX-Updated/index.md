@@ -3,6 +3,8 @@ title = 'Building Universal Apache Tomcat Native Library on OSX - Updated'
 date = 2012-06-13T13:20:23+02:00
 draft = false
 tags = [ 'OSX', 'TCNative', 'Tomcat' ]
+categories = [ 'OS' ]
+image = 'tcnativeosx.png'
 +++
 
 Updated build process for tomcat-connector, 1.1.24, no more APXS variable or configure parameters required

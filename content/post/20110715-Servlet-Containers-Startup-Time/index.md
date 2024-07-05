@@ -3,6 +3,8 @@ title = 'Servlet Containers Startup Time'
 date = 2011-07-15T13:20:23+02:00
 draft = false
 tags = [ 'JBoss', 'Jetty', 'OSX', 'Tomcat' ]
+categories = [ 'Performance' ]
+image = 'Startup6.png'
 +++
 
 With the release of JBoss AS7, we see many comments around about the startup time of Application Servers. Even if this appears marginal in real life (an application server is expected to run 24/24 7/7), there is area where startup time is still important like for developpers. In developpment phase, when you have to start/stop your server dozens of times by day, you need fastest start time as possible.

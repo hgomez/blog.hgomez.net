@@ -3,6 +3,8 @@ title = 'Forest Extension Fixes for Mercurial 1.7'
 date = 2010-11-16T13:20:23+02:00
 draft = false
 tags = [ 'Mercurial' ]
+categories = [ 'Software' ]
+image = 'mercurial.png'
 +++
 
 I’m using Mercurial 1.7 from MacPorts to sync with OpenJDK sources. This operation is usually done with **hg fclone**

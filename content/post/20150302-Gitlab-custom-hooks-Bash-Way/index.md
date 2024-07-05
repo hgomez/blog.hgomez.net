@@ -3,7 +3,7 @@ title = 'Gitlab custom hooks - Bash Way'
 date = 2015-03-02T13:20:23+02:00
 draft = false
 tags = [ 'Git', 'GitLab' ]
-categories = [ 'CI' ]
+categories = [ 'SoftwareFactory' ]
 image = 'gitlab-hook.png'
 +++
 

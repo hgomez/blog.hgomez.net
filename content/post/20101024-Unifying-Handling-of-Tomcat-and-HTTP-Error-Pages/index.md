@@ -3,6 +3,8 @@ title = 'Unifying Handling of Tomcat and HTTP Error Pages'
 date = 2010-10-24T13:20:23+02:00
 draft = false
 tags = [ 'Httpd', 'Tomcat' ]
+categories = [ 'Run' ]
+image = 'httpdtomcaterrors.png'
 +++
 
 In configuration with a front Apache HTTPd 2.2.x server and backend Tomcat servers, you may have defined customs error page on the HTTPd configuration using [ErrorDocument](http://httpd.apache.org/docs/2.2/mod/core.html#errordocument) directive.

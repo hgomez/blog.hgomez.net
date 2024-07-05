@@ -3,6 +3,8 @@ title = 'OpenJDK 7 on OSX and IntelliJ IDEA EAP'
 date = 2011-04-16T13:20:23+02:00
 draft = false
 tags = [ 'IntelliJ', 'OpenJDK', 'OSX'  ]
+categories = [ 'OS' ]
+image = 'intellijosxopenjdk.png'
 +++
 
 During the last weeks, Apple started to contribute it’s Aqua/Cocoa port to OpenJDK 7 on the macosx-port branch. It’s still works it progress but it was nice to see some SWING apps like IntelliJ IDEA works on the preliminary release.

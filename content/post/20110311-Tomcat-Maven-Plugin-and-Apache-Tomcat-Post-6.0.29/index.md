@@ -3,6 +3,8 @@ title = 'Tomcat Maven Plugin and Apache Tomcat Post 6.0.29'
 date = 2011-03-11T13:20:23+02:00
 draft = false
 tags = [ 'Maven', 'Tomcat' ]
+categories = [ 'Software' ]
+image = 'tomcatmaven.png'
 +++
 
 If you’re using the [Tomcat Maven Plugin](http://mojo.codehaus.org/tomcat-maven-plugin/) and want to use post 6.0.29  Apache Tomcat, ie latest 6.0.32, you should update your pom to handle a change in artifact.

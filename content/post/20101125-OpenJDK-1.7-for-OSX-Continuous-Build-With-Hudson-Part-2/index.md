@@ -3,6 +3,8 @@ title = 'OpenJDK 1.7 for OSX Continuous Build With Hudson - Part 2'
 date = 2010-11-25T13:20:23+02:00
 draft = false
 tags = [ 'Hudson', 'OpenJDK', 'OSX' ]
+categories = [ 'OS' ]
+image = 'openjdkosxhudson.png'
 +++
 
 [First episode](http://blog.hgomez.net/?p=670) of OpenJDK 1.7 for OS/X covered build of 32 and 64 bits VM via Hudson.

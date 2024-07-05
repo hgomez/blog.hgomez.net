@@ -3,6 +3,8 @@ title = 'OpenJDK 1.7 for OSX Continuous Build With Hudson - Part 1'
 date = 2010-11-21T13:20:23+02:00
 draft = false
 tags = [ 'Hudson', 'OpenJDK', 'OSX' ]
+categories = [ 'OS' ]
+image = 'openjdkosxhudson.png'
 +++
 ## Pre-requisite
 

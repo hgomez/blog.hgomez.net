@@ -3,6 +3,8 @@ title = 'Disable Tomcat Memory Leak Detector'
 date = 2010-05-04T13:20:23+02:00
 draft = false
 tags = [ 'Tomcat' ]
+categories = [ 'Run' ]
+image = 'tomcatmemoryleak.png'
 +++
 
 

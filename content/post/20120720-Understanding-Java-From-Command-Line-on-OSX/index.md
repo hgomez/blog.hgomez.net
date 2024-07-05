@@ -3,6 +3,8 @@ title = 'Understanding Java From Command Line on OSX'
 date = 2012-07-20T13:20:23+02:00
 draft = false
 tags = [ 'Java', 'OSX' ]
+categories = [ 'OS' ]
+image = 'osxclijava.png'
 +++
 # Java on OSX
 

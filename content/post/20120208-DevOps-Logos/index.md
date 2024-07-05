@@ -3,6 +3,8 @@ title = 'DevOps Logo'
 date = 2012-02-08T13:20:23+02:00
 draft = false
 tags = [ 'DevOps', 'Logo' ]
+categories = [ 'Opensource' ]
+image = 'logo_devops2.jpg'
 +++
 
 I asked some times ago Sabrina Perrin (@saabpii) a great graphic designer I worked with for years, if she could try to works on some DevOps logo.
