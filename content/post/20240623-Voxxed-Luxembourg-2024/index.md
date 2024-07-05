@@ -16,5 +16,5 @@ To resume :
 - It's crucial to involve all stakeholders.
 - Observability is a key to success.
 
-The slide of my talk, in French, are available on [Slideshare](https://fr.slideshare.net/slideshow/sre-mythes-et-realites-voxxed-2024-pdf/269786217)
+The slides of my talk, in French, are available on [Slideshare](https://fr.slideshare.net/slideshow/sre-mythes-et-realites-voxxed-2024-pdf/269786217). You can also watch the recorded video on [Youtube](https://www.youtube.com/watch?v=tm0UY0MC1po).
 
