@@ -2,11 +2,11 @@
 title: About Me
 date: 2024-07-02
 slug: "aboutme"
-menu:
-    main: 
-        weight: 4
-        params:
-            icon: user
+#menu:
+#    main: 
+#        weight: 4
+#        params:
+#            icon: user
 comments: false
 image: aboutme/voxxed-by-denis.png
 ---
