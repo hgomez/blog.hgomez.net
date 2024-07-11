@@ -50,7 +50,8 @@ With this structure, you have a working copy of your blog in Obsidian, while Hug
 * Obsidian craft images links this way : 
 
 ![defaut-link](obisdian-deflink.png)
-	For Hugo, you should rework them the Markdown way
+
+* For Hugo, you should rework them the Markdown way
 
 ![md-linkl](obisdian-mdflink.png.png)
 
