@@ -96,12 +96,12 @@ jobs:
 
 GitHub Pages were updated to use GitHub Actions
 
-![GitHubPage](github-page-1.png)
+![GitHub Pages to use GitHub Actions](github-page-1.png)
 
-I use default GitHub Action 
+I use default GitHub Actions
 
-![GitHubAction-Default](github-action-1.png)
+![Default GitHub Actions](github-action-1.png)
 
 Now, each time I push to GitHub, Hugo is regenerating site and contents are published on GitHub Page
 
-![deploy-at-push](action-at-push.png)
+![Hugo build and deploy at Push Time](action-at-push.png)
