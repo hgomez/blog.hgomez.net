@@ -101,3 +101,7 @@ GitHub Pages were updated to use GitHub Actions
 I use default GitHub Action 
 
 ![GitHubAction-Default](github-action-1.png)
+
+Now, each time I push to GitHub, Hugo is regenerating site and contents are published on GitHub Page
+
+![deploy-at-push](action-at-push.png)
