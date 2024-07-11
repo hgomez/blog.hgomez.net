@@ -9,8 +9,9 @@ categories = [ 'Blog' ]
 
 My former blog was hosted on GitHub Pages and it was really easy to use Hugo there.
 
-First, I installed a GitHub Action for Hugo Deployment under .github/workflows/hugo.yaml
-There is many GitHub Action available, I used the one [suggested by Hugo](https://gohugo.io/hosting-and-deployment/hosting-on-github/) 
+First, I installed a GitHub Action for Hugo Deployment under `.github/workflows/hugo.yaml`
+
+There are many GitHub Actions available, and I used the one [suggested by Hugo](https://gohugo.io/hosting-and-deployment/hosting-on-github/) 
 
 ```
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
@@ -98,10 +99,10 @@ GitHub Pages were updated to use GitHub Actions
 
 ![GitHub Pages to use GitHub Actions](github-page-1.png)
 
-I use default GitHub Actions
+I am using the default GitHub Actions configuration
 
 ![Default GitHub Actions](github-action-1.png)
 
-Now, each time I push to GitHub, Hugo is regenerating site and contents are published on GitHub Page
+Now, whenever I push code to GitHub, Hugo automatically regenerates the site, and the updated content is published on GitHub Pages.
 
 ![Hugo build and deploy at Push Time](action-at-push.png)
