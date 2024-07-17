@@ -7,43 +7,36 @@ image = 'ibookg4-title.png'
 categories = [ 'Vintage' ]
 +++
 
-Recently I was gifted an old iBook G4, in working order.
-This machine was the latest PowerPC based laptop produced by Apple.
+I recently received an old iBook G4 as a gift, and it's still in working order! This machine was the last PowerPC-based laptop Apple ever produced.
 
 ![iBook G4](ibookg4.jpg)
 
-As a good practice, I always reinstall a clean version of OS on those refurbished machine. 
+As a best practice, I always reinstall a clean operating system on any machine I refurbish.
 
-This iBook G4 came installed in OSX Tiger (10.4 / 2005-2007), a splendid PowerPC G4 @ 1.33Ghz with 512MB of RAM and a large 40GB hard drive.
+This particular iBook G4 came pre-installed with OS X Tiger (10.4, released in 2005). It boasts a powerful PowerPC G4 processor clocked at 1.33 GHz, 512MB of RAM, and a spacious 40GB hard drive.
 
-On PowerPC, OSX Leopard (10.5 / 2007-2009) was the latest version available so I decided to reinstall this machine from scratch.
+Since OS X Leopard (10.5, released in 2007) was the final version compatible with PowerPC machines, I opted for a fresh install of that version.
 
 ## Disk Utils, format and patatra
 
-I have a working Tiger DVD disk, so I decided to boot on it, reformat hard drive and install OSX Leopard.
+I had a working Tiger DVD, so I planned to boot from it, reformat the hard drive, and install OS X Leopard.
 
-I booted, reformated hard drive and started OSX installation but ... after a few minutes, installation was stopped and ultimatily iBook restarted.  
-
-I tried many time, and no way. 
-
-I tried with a Leopard DVD disk, same problem.
+After booting, reformatting the hard drive, and initiating the OS X Leopard installation, the process stopped after a few minutes, and the iBook ultimately restarted. I attempted this process several times with the same negative outcome, even using a different Leopard DVD. Unfortunately, the installation consistently failed.
 
 ![Leopard DVD](leopard-dvd.jpg)
 
-Conclusion iBook DVD drive is unsable for installation and probably damaged.
+The iBook's DVD drive is likely malfunctioning and preventing a successful installation.
 
 ## Build a bootable USB with OSX Leopard 
 
 Without Macintosh machines and working DVD drive, so I had look for Mac OSX Leopard image and found it on Archive.org, [Max OS X Leopard 10.5.6 (Retail ISO)](https://archive.org/details/mac-os-x-10.5.6-leopard-install-dvd)
 
-I downloaded it on a Macintosh and used DIskUtils to make a bootable USB
+I downloaded it on a Macintosh and used DIsk Utility to make a bootable USB
 I used the [CLI way](https://www.cybrary.it/blog/macos-terminal-create-bootable-usb-iso-using-dd), with diskutil and dd.
 
 ## USB Boot via OpenFirmware
 
-Out of the box, those old Apple machines didn't know how to boot from USB but there is a trick via OpenFirmware.
-
-OpenFirmware was Apple BIOS for PowerPC systems, used from 1994 to 2006 and with a lot of features.
+Early Apple machines based on PowerPC processors (1994-2006) lacked built-in support for booting from USB drives. However, a clever workaround existed through OpenFirmware.
 
 2 features will be interesting here, browsing USB and booting from USB
 
@@ -77,18 +70,19 @@ I found the drive on usb0 device, at disk@1
 
 ## Installation from USB, first try
 
-Boot from USB took a few minutes, then I started OSX installation
-After 10 minutes, the hard drive was doing the nasty sounds from the old age, a damaged sector was encountered and there was no way to go farther. 15 minutes later, installation process restarted iBook.
+Booting from the USB drive took a few minutes. Then, I began the macOS installation process.
+
+After about 10 minutes, the hard drive started making concerning noises, suggesting potential age-related damage. It encountered a damaged sector, halting the installation progress. Fifteen minutes later, the installation process restarted the iBook.
 
 ## Installation from USB, second try
 
-Removing internal hard drive from an iBook G4 is not impossible but I didn't have a new working  2.5" ATA drive hard drive available, so I should find another way.
+Removing the internal hard drive from an iBook G4 isn't impossible, but since I don't have a new, functioning 2.5" ATA hard drive available, I'll need to find an alternative solution.
 
-Only a few sectors seems in a trouble, so why not just move installation past this damaged area ?
+Since only a few sectors seem to be causing problems, why not attempt to bypass the damaged area during the installation?
 
 ### 2 partitions :)
 
-The trick was to use 2 partitions, a void one (including the damaged area) and a working one (to do the installation)
+The trick was to create two partitions: a dummy partition (including the damaged area) and a working partition (to install the OS).
 
 I started **Disk Utility**
 
