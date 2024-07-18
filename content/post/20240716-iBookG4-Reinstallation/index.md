@@ -115,13 +115,13 @@ Victory, the animated video by the end of installation
 
 ![End Of Installation](i9.jpg)
 
-![Installation Completed](I20.jpg)
+![Installation Completed](I10.jpg)
 
 Added an 256MB DDR 2700 DIMM, iBook have now 768MB of RAM 
-![256MB more](I21.jpg)
+![256MB more](I11.jpg)
 
 Apple update servers are still serving Mac OSX Leopard updates, first pass
-![Update Time](I22.jpg)
+![Update Time](I12.jpg)
 
 And the very latest PowerPC Java version, Java 6...
-![Java is up to date ...](I23.jpg)
+![Java is up to date ...](I13.jpg)
