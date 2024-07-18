@@ -36,15 +36,13 @@ I used the [CLI way](https://www.cybrary.it/blog/macos-terminal-create-bootable-
 
 ## USB Boot via OpenFirmware
 
-Early Apple machines based on PowerPC processors (1994-2006) lacked built-in support for booting from USB drives. However, a clever workaround existed through OpenFirmware.
+Early Apple machines based on PowerPC processors (1994-2006) lacked built-in support for booting from USB drives. However, a clever workaround existed through OpenFirmware as described [here](https://forums.macrumors.com/threads/guide-new-method-booting-from-usb-on-powerpc-macs.2403368/)
 
-2 features will be interesting here, browsing USB and booting from USB
-
-**dev** and **ls**, are the commands to select a device and list contents
+2 features of OpenFirmare will interest us, browsing USB and booting from USB.
 
 ### Browsing USB 
 
-I disconnected everything from the iBook and plugged an USB drive in first USB port (on the left)
+**dev** and **ls**, are the commands to select a device and list contents. I disconnected everything from the iBook and plugged an USB drive in first USB port (on the left)
 
 I selected first usb
 
