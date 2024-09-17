@@ -172,4 +172,8 @@ total 4392
 2596 -rwx------ 1 root root 2656136 sept. 10 10:23 grubx64.efi
 ```
 
-I reinstalled the SSD into the Mac, restarted the computer while holding down the Alt key to access the boot picker, and then selected the EFI partition to boot into Mint 22 :)
+I reinstalled the SSD into the Mac, restarted the computer while holding down the Alt key to access the boot picker, and then selected the **EFI Boot** to boot into Mint 22 :)
+
+![boot screen](mint22-boot.jpg)
+
+![Dual Screen](mint22-dual.jpg)
