@@ -19,13 +19,13 @@ Then I installed extended hugo
 ```
 hugo version 
 
-hugo v0.128.0-e6d2712ee062321dc2fc49e963597dd5a6157660+extended linux/amd64 BuildDate=2024-06-25T16:15:48Z VendorInfo=gohugoio
+hugo v0.142.0-1f746a872442e66b6afd47c8c04ac42dc92cdb6f+extended darwin/amd64 BuildDate=2025-01-22T12:20:52Z VendorInfo=gohugoio
 ```
-Hugo is 0.128.0, install same extended version with asdf
+Hugo is 0.142.0, install same extended version with asdf
 
 ```
-asdf install hugo extended_0.128.0
-asdf global hugo extended_0.128.0
+asdf install hugo extended_0.142.0
+asdf global hugo extended_0.142.0
 ```
 
 ## First site
