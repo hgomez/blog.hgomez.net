@@ -8,8 +8,11 @@ title: "Rico's Blog"
 theme: ["hugo-theme-stack"]
 hasCJKLanguage: false
 disqusShortname: "thericosblog"
-paginate: 5
+#paginate: 5
 defaultContentLanguage: "en"
+
+paginatioan:
+  pagerSize: 5
 
 #
 # Markdown renderer configuration
